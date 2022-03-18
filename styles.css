@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(180, 180, 180);
+}
+
+.bilde {
+    max-height: 200px;
+    max-width: 200px;
+
+}
