@@ -4,8 +4,10 @@ const model = {
         innhold: '',
         currentpage: "Film Velger",
         currentuser: "Benjamin",
+        currentepost: "epost@.no",
         antallFavoritter: 0,
         antallHidet: 0,
+        favOs: [],
     },
     // inputs til hver side
     inputs: {
@@ -207,15 +209,45 @@ const model = {
     series: [
         {
             id: 1,
-            title: 'The mentalist season 1',
-            Blockbuster: 'https://blockbuster.no/tv-serier/the-mentalist',
+            title: 'The Mentalist Season 1',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
             picture: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/The_Mentalist_-_The_Complete_1st_Season.jpg/220px-The_Mentalist_-_The_Complete_1st_Season.jpg',
         },
         {
             id: 2,
-            title: 'The mentalist season 2',
-            Blockbuster: 'https://blockbuster.no/tv-serier/the-mentalist',
+            title: 'The Mentalist Season 2',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
             picture: 'https://upload.wikimedia.org/wikipedia/en/7/7a/The_Mentalist_-_The_Complete_2nd_Season.jpg',
+        },
+        {
+            id: 3,
+            title: 'The Mentalist Season 3',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
+            picture: 'https://upload.wikimedia.org/wikipedia/en/3/35/The_Mentalist_-_The_Complete_3rd_Season.jpg',
+        },
+        {
+            id: 4,
+            title: 'The Mentalist Season 4',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
+            picture: 'https://upload.wikimedia.org/wikipedia/en/0/03/The_Mentalist_-_The_Complete_4th_Season.jpg',
+        },
+        {
+            id: 5,
+            title: 'The Mentalist Season 5',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
+            picture: 'https://upload.wikimedia.org/wikipedia/en/2/2c/The_Mentalist_-_The_Complete_5th_Season.jpg',
+        },
+        {
+            id: 6,
+            title: 'The Mentalist Season 6',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
+            picture: 'https://upload.wikimedia.org/wikipedia/en/f/f6/The_Mentalist_-_The_Complete_6th_Season.jpg',
+        },
+        {
+            id: 7,
+            title: 'The Mentalist Season 7',
+            hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYCVhjQCBs6KfnwEAAAAL:type:series',
+            picture: 'https://upload.wikimedia.org/wikipedia/en/f/f4/The_Mentalist_-_The_7th_and_Final_Season.jpg',
         },
     ],
 

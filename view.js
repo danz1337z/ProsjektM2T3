@@ -21,7 +21,7 @@ function updateView() {
 }
 
 function login() {
-    let html = `
+    let html = /*html*/ `
     <br>
         <Center>
         <h1> ${model.app.currentpage} </h1>
@@ -37,14 +37,16 @@ function login() {
 
 function showmeny() {
     let html = /*html*/`
+    
     <center>
     <Button class="a" onclick="changePage('Min Side')"> Min Side </button>
     <Button class="a" onclick="changePage('Kategorier')"> Kategorier </button>
     <Button class="a" onclick="changePage('movie')"> Film </button>
     <Button class="a" onclick="changePage('series')"> Serier </button>
-    <Button class="a" onclick="changePage('favs')"> Favoritter </button>
-    <Button class="a" onclick="changePage('random')"> Finn tilfeldig Film </button>
+    <Button class="a" onclick="changePage('favs')"> Favoritter (${model.app.antallFavoritter})</button>
+    <Button class="a" onclick="changePage('random')"> Finn tilfeldig Film / Serie </button>
     </center>
+
     `;
     return html;
 }
@@ -83,7 +85,9 @@ function series() {
         <p><img class="bilde" src="${model.series[i].picture}" alt="The mentalist"></p>
         <b>Tittel: ${model.series[i].title}</b>
         <br><br>
-        <Button onclick="openInNewTab('${model.series[i].Blockbuster}');"> Se den på Netflix</Button>
+        <Button onclick="openInNewTab('${model.series[i].hbo}');"> Se den på HBO max</Button>
+        <br><br>
+        <button onclick="addSerie(${i})"> Legg i mine favoritter</button>
         <hr>
         `;
     };
@@ -95,15 +99,33 @@ function minside() {
     ${showmeny()}
     <center>
     <h1> ${model.app.currentpage} </h1>
-    </center>`;
+    <img class="bilde" src="https://kvener.no/wp-content/uploads/2019/02/blank-profile-picture-973460_640.png"></img>
+    <br><br>
+    Navn: ${model.app.currentuser} <button> Endre Navn </button> <br>
+    Epost: ${model.app.currentepost} <button> Endre Epost </button> <br>
+    Passord: ***** <button> Endre Passord </button> <br>
+    </center>
+
+
+
+    `;
     appDiv.innerHTML = html;
 }
 
 function favs() {
     let html = `
     ${showmeny()}
-    <h1> Dine favoritter </h1>`;
-
+    <center>
+    <h1> Dine favoritter </h1>
+     </center`;
+    for (let i = 0; i < model.app.favOs.length; i++) {
+        html += `<center>
+         <b>
+        ${model.app.favOs[i]}
+        <button onclick="slett(${i})">Slett</button>
+        </b>
+        <hr>
+        </center>`};
     appDiv.innerHTML = html;
 }
 
@@ -112,8 +134,10 @@ function random() {
     ${showmeny()}
     <center>
         <h1> Velkommen ${model.app.currentuser} </h1>
-        <p> Finn Random Film </p>
-        <button> Spin </button>
+        <h3> Finn Random Film / Serie </h3>
+        <button onclick = "spin()"> Spin </button>
+        <br><br>
+        <div id="random"></div>
     </center>`;
     appDiv.innerHTML = html;
 }
