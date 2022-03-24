@@ -8,6 +8,7 @@ function addSerie(index) {
 function addFavoritt(index) {
     model.app.antallFavoritter++;
     model.app.favOs.push(model.movies[index].title);
+    model.app.favOs.push(model.movies[index].Netflix);
     movie();
 }
 //Funksjon som legger til favoritt random

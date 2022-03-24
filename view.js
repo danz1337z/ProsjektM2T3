@@ -63,9 +63,14 @@ function movie() {
     ${showmeny()}
     <h1> Filmer </h1>`;
     for (let i = 0; i < model.movies.length; i++) {
+        let first = i % 5 == 0 ? 'first' : '';
         html += `
+        <div class="cell ${first} ">
         <br>
+        <center>
         <img class="bilde" src="${model.movies[i].picture}" alt="spiderman">
+        
+        <br>
         <img src="h.jpg" class="favoritt" onclick="addFavoritt(${i})">
         <img src="x.png" class="fjern" onclick="hideMovie(${i})">
         <br><br>
@@ -73,7 +78,9 @@ function movie() {
         <br><br>
         <Button onclick="openInNewTab('${model.movies[i].Netflix}');"> Se den på Netflix</Button>
         <br><br>
-        <hr> 
+        </center>
+         
+        </div>
         `;
 
     };
@@ -85,9 +92,13 @@ function series() {
     ${showmeny()}
     <h1> Serier </h1>`
     for (let i = 0; i < model.series.length; i++) {
+        let first = i % 5 == 0 ? 'first' : '';
         html += `
+        <div class="cell ${first} ">
         <br>
+        <center>
         <img class="bilde" src="${model.series[i].picture}" alt="The mentalist">
+        <br>
         <img src="h.jpg" class="favoritt" onclick="addSerie(${i})">
         <img src="x.png" class="fjern" onclick="hideSerie(${i})">
         <br><br>
@@ -95,7 +106,8 @@ function series() {
         <br><br>
         <Button onclick="openInNewTab('${model.series[i].hbo}');"> Se den på HBO max</Button>
         <br><br>
-        <hr>
+        </center>
+        </div>
         `;
     };
     appDiv.innerHTML = html;
@@ -131,8 +143,10 @@ function favs() {
         html += `
          <b>
         ${model.app.favOs[i]}
+         <Button onclick="openInNewTab('${model.app.favOs[i]}');"> Se den på Netflix</Button>
         <button onclick="slett(${i})">Slett</button>
         </b>
+       
         <hr>
         `};
     appDiv.innerHTML = html;
