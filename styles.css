@@ -1,17 +1,103 @@
 body {
-    background-color: rgb(180, 180, 180);
+    background-color: black;
 }
 
 .bilde {
     max-height: 200px;
     max-width: 200px;
-
+    border: solid red 3px;
 }
+
 .bilde2 {
     max-height: 400px;
     max-width: 400px;
+    border: solid red 6px;
+}
 
+.profilbilde {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50px;
+    border: solid red 3px;
 }
-.a {
-    font-size: 1.3rem;
+
+html {
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.favoritt {
+  font-size: 3rem;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  margin-left: 50px;
+}
+.favoritt:hover {
+  opacity: 0.7;
+}
+
+.fjern {
+  font-size: 3rem;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  margin-left: 50px;
+}
+.fjern:hover {
+  opacity: 0.7;
+}
+/*Teksten nedenfor er kun random funksjonene*/
+.favoritt-r {
+  font-size: 3rem;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+.favoritt-r:hover {
+  opacity: 0.7;
+}
+
+.fjern-r {
+  font-size: 3rem;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  margin-left: 300px;
+}
+.fjern-r:hover {
+  opacity: 0.7;
+}
+.spinner {
+    border: solid red 6px;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    animation: loading 5s linear infinite;
+  }
+  @keyframes loading{
+    to {transform: rotate(1turn);}
+  }
+  .spinner:hover {
+    opacity: 0.7;
+  }
+
+  .btn-group .button {
+   
+    background-color: red;
+    border: 1px solid red;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .btn-group .button:hover {
+    opacity: 0.7;
+  }
+

@@ -1,13 +1,17 @@
+
 const model = {
     // tilstand app
+
     app: {
         innhold: '',
         currentpage: "Film Velger",
         currentuser: "Benjamin",
         currentepost: "epost@.no",
         antallFavoritter: 0,
-        antallHidet: 0,
         favOs: [],
+        antallHidet: 0,
+        hide: [],
+
     },
     // inputs til hver side
     inputs: {
