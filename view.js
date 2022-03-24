@@ -16,12 +16,11 @@ function updateView() {
     if (side == "favs") favs();
     if (side == "random") random();
     if (side == "Min Side") minside();
-
-
+    if (side == "skjult") skjult();
 }
 
 function login() {
-    let html = /*html*/ `
+    let html = `
     <br>
         <Center>
         <h1> ${model.app.currentpage} </h1>
@@ -37,15 +36,16 @@ function login() {
 
 function showmeny() {
     let html = /*html*/`
-    
+    <div class="btn-group">
     <center>
-    <Button class="a" onclick="changePage('Min Side')"> Min Side </button>
-    <Button class="a" onclick="changePage('Kategorier')"> Kategorier </button>
-    <Button class="a" onclick="changePage('movie')"> Film </button>
-    <Button class="a" onclick="changePage('series')"> Serier </button>
-    <Button class="a" onclick="changePage('favs')"> Favoritter (${model.app.antallFavoritter})</button>
-    <Button class="a" onclick="changePage('random')"> Finn tilfeldig Film / Serie </button>
+    <Button type="button" class="button" onclick="changePage('Min Side')">Min Side</button>
+    <Button type="button" class="button" onclick="changePage('Kategorier')">Kategorier</button>
+    <Button type="button" class="button" onclick="changePage('movie')">Alle filmer</button>
+    <Button type="button" class="button" onclick="changePage('series')">Alle serier</button>
+    <Button type="button" class="button" onclick="changePage('random')">Tilfeldig Film / Serie</button>
     </center>
+</div>
+
 
     `;
     return html;
@@ -61,17 +61,21 @@ function loggpå() {
 function movie() {
     let html = `
     ${showmeny()}
-    <h1> Filmer! </h1>`;
+    <h1> Filmer </h1>`;
     for (let i = 0; i < model.movies.length; i++) {
         html += `
-        <p><img class="bilde" src="${model.movies[i].picture}" alt="spiderman"></p>
+        <br>
+        <img class="bilde" src="${model.movies[i].picture}" alt="spiderman">
+        <img src="h.jpg" class="favoritt" onclick="addFavoritt(${i})">
+        <img src="x.png" class="fjern" onclick="hideMovie(${i})">
+        <br><br>
         <b>Tittel: ${model.movies[i].title}</b>
         <br><br>
         <Button onclick="openInNewTab('${model.movies[i].Netflix}');"> Se den på Netflix</Button>
         <br><br>
-        <button onclick="addFavoritt(${i})"> Legg i mine favoritter</button>
-        <hr>
+        <hr> 
         `;
+
     };
     appDiv.innerHTML = html;
 }
@@ -79,15 +83,18 @@ function movie() {
 function series() {
     let html = `
     ${showmeny()}
-    <h1> Serier! </h1>`
+    <h1> Serier </h1>`
     for (let i = 0; i < model.series.length; i++) {
         html += `
-        <p><img class="bilde" src="${model.series[i].picture}" alt="The mentalist"></p>
+        <br>
+        <img class="bilde" src="${model.series[i].picture}" alt="The mentalist">
+        <img src="h.jpg" class="favoritt" onclick="addSerie(${i})">
+        <img src="x.png" class="fjern" onclick="hideSerie(${i})">
+        <br><br>
         <b>Tittel: ${model.series[i].title}</b>
         <br><br>
         <Button onclick="openInNewTab('${model.series[i].hbo}');"> Se den på HBO max</Button>
         <br><br>
-        <button onclick="addSerie(${i})"> Legg i mine favoritter</button>
         <hr>
         `;
     };
@@ -99,46 +106,50 @@ function minside() {
     ${showmeny()}
     <center>
     <h1> ${model.app.currentpage} </h1>
-    <img class="bilde" src="https://kvener.no/wp-content/uploads/2019/02/blank-profile-picture-973460_640.png"></img>
+    <img class="profilbilde" src="https://kvener.no/wp-content/uploads/2019/02/blank-profile-picture-973460_640.png"></img>
     <br><br>
     Navn: ${model.app.currentuser} <button> Endre Navn </button> <br>
     Epost: ${model.app.currentepost} <button> Endre Epost </button> <br>
     Passord: ***** <button> Endre Passord </button> <br>
+    <br><br>
+    <div class="btn-group">
+    <Button type="button" class="button" onclick="changePage('favs')">Mine favoritter(${model.app.antallFavoritter})</button>
+    <Button type="button" class="button" onclick="changePage('skjult')">Skjult innhold(${model.app.antallHidet})</button>
+    </div>
     </center>
-
-
-
     `;
+
     appDiv.innerHTML = html;
 }
 
 function favs() {
     let html = `
     ${showmeny()}
-    <center>
     <h1> Dine favoritter </h1>
-     </center`;
+     `;
     for (let i = 0; i < model.app.favOs.length; i++) {
-        html += `<center>
+        html += `
          <b>
         ${model.app.favOs[i]}
         <button onclick="slett(${i})">Slett</button>
         </b>
         <hr>
-        </center>`};
+        `};
     appDiv.innerHTML = html;
 }
+
 
 function random() {
     let html = `
     ${showmeny()}
     <center>
-        <h1> Velkommen ${model.app.currentuser} </h1>
-        <h3> Finn Random Film / Serie </h3>
-        <button onclick = "spin()"> Spin </button>
+        <h1> Velkommen ${model.app.currentuser}!</h1>
+        <h3> Trykk på hjulet for å finne en tilfeldig film / serie </h3>
+        <img src="spinning-shit.png" class="spinner" onclick = "spin()"> 
         <br><br>
-        <div id="random"></div>
-    </center>`;
+        </center>
+        <div class="rand" id="random"></div>
+    `;
     appDiv.innerHTML = html;
 }
 
@@ -163,6 +174,23 @@ function showUnder() {
 
     appDiv.innerHTML = html;
 }
+
+function skjult() {
+    let html = `
+    ${showmeny()}
+    <h1> Skjult innhold </h1>
+     `;
+    for (let i = 0; i < model.app.hide.length; i++) {
+        html += `
+         <b>
+        ${model.app.hide[i]}
+        <button onclick="gjennopprett(${i})">Gjennopporett</button>
+        </b>
+        <hr>
+        `};
+    appDiv.innerHTML = html;
+}
+
 
 function openInNewTab(url) {
     window.open(url, '_blank').focus();
