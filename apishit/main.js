@@ -2,7 +2,7 @@
 // 	"method": "GET",
 // 	"headers": {
 // 		"x-rapidapi-host": "data-imdb1.p.rapidapi.com",
-// 		"x-rapidapi-key": "76d4c83ea9msh0ba34351e73b57ep10e7a6jsnc902a217da28"
+// 		
 // 	}
 // })
 // 	.then(response => response.json())
@@ -24,7 +24,7 @@
 // 	"method": "GET",
 // 	"headers": {
 // 		"x-rapidapi-host": "data-imdb1.p.rapidapi.com",
-// 		"x-rapidapi-key": "76d4c83ea9msh0ba34351e73b57ep10e7a6jsnc902a217da28"
+// 		
 // 	}
 // })
 // 	.then(response => response.json())
@@ -52,7 +52,7 @@
 // 		"method": "GET",
 // 		"headers": {
 // 			"x-rapidapi-host": "data-imdb1.p.rapidapi.com",
-// 			"x-rapidapi-key": '76d4c83ea9msh0ba34351e73b57ep10e7a6jsnc902a217da28'
+// 			
 // 		}
 // 	});
 // 	let data = await response.json();
@@ -71,7 +71,7 @@ async function getdataIMDB() {
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "data-imdb1.p.rapidapi.com",
-			"x-rapidapi-key": "76d4c83ea9msh0ba34351e73b57ep10e7a6jsnc902a217da28"
+			"x
 		}
 	});
 	let data = await response.json();
@@ -85,7 +85,7 @@ const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Host': 'data-imdb1.p.rapidapi.com',
-		'X-RapidAPI-Key': 'fc93763f19msh30c034cc9ad1212p1790c8jsnced5dd9c592f'
+		'X-R
 	}
 };
 
