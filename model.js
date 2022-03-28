@@ -217,13 +217,66 @@ const model = {
         {
             id: 24,
             categoryId: [1],
-            title: "Baby Driver (2017)",
-            Netflix: 'https://www.netflix.com/no-en/title/80142090',
-            picture: 'https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_FMjpg_UX1000_.jpg',
+            title: "Man On Fire (2004)",
+            Netflix: 'https://www.netflix.com/no-en/title/60034560',
+            picture: 'https://img.reelgood.com/content/movie/cb888f28-75ae-4af0-97d5-d37f8867d036/poster-780.webp',
         },
+        {
+            id: 25,
+            categoryId: [1],
+            title: "Colombiana (2011)",
+            Netflix: 'https://www.netflix.com/no-en/title/70178640',
+            picture: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSBXOsHe0nLGrX8UBiUjv1rYXDW9A4viuyB7eDhRgitfY2mvETD',
+        },
+        {
+            id: 26,
+            categoryId: [1],
+            title: "The Adam Project (2022)",
+            Netflix: 'https://www.netflix.com/no-en/title/81309354',
+            picture: 'https://img.reelgood.com/content/movie/bb7a0795-1e7d-4ded-9254-e8f07c0ef0dd/poster-780.webp',
+        },
+        {
+            id: 27,
+            categoryId: [1],
+            title: "The Italian Job (2003)",
+            Netflix: 'https://www.netflix.com/no-en/title/60027706',
+            picture: 'https://img.reelgood.com/content/movie/e469bf99-2961-46a4-88a9-d56890509f6b/poster-780.webp',
+        },
+        {
+            id: 28,
+            categoryId: [1],
+            title: "Kill Bill: Vol. 1 (2003)",
+            Netflix: 'https://www.netflix.com/no-en/title/60031236',
+            picture: 'https://img.reelgood.com/content/movie/459663e3-b56f-457c-89a2-591274f6e491/poster-780.webp',
+        },
+        {
+            id: 29,
+            categoryId: [1],
+            title: "Kill Bill: Vol. 2 (2004)",
+            Netflix: 'https://www.netflix.com/no-en/title/60032563',
+            picture: 'https://img.reelgood.com/content/movie/49f3fc3b-d934-4640-bae0-85f54e881732/poster-780.webp',
+        },
+        {
+            id: 30,
+            categoryId: [1],
+            title: "The Marksman (2021)",
+            Netflix: 'https://www.netflix.com/no-en/title/81404853',
+            picture: 'https://img.reelgood.com/content/movie/0cf7439d-d0fa-41db-ae7a-aa78a3eb0e70/poster-780.webp',
+        },
+
+        /*  {
+              id: ,
+              categoryId: [],
+              title: "  ()",
+              Netflix: '',
+              picture: '',
+          }, 
+          */
+
 
 
     ],
+
 
     series: [
         {

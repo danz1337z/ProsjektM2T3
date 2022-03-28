@@ -71,8 +71,8 @@ function movie() {
         <img class="bilde" src="${model.movies[i].picture}" alt="spiderman">
         
         <br>
-        <img src="h.jpg" class="favoritt" onclick="addFavoritt(${i})">
-        <img src="x.png" class="fjern" onclick="hideMovie(${i})">
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${i})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${i})">
         <br><br>
         <b>Tittel: ${model.movies[i].title}</b>
         <br><br>
@@ -99,8 +99,8 @@ function series() {
         <center>
         <img class="bilde" src="${model.series[i].picture}" alt="The mentalist">
         <br>
-        <img src="h.jpg" class="favoritt" onclick="addSerie(${i})">
-        <img src="x.png" class="fjern" onclick="hideSerie(${i})">
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addSerie(${i})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideSerie(${i})">
         <br><br>
         <b>Tittel: ${model.series[i].title}</b>
         <br><br>

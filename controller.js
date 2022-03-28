@@ -70,8 +70,8 @@ function spin() {
         <h3> ${model.movies[random].title}</h3>
         <Button onclick="openInNewTab('${model.movies[random].Netflix}');"> Se den på Netflix</Button>
         <br>
-        <img src="h.jpg" class="favoritt-r" onclick="addTilfeldig(${random})">
-        <img src="x.png" class="fjern-r" onclick="hideRandom(${random})">
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt-r" onclick="addTilfeldig(${random})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern-r" onclick="hideRandom(${random})">
        </center>
         `;
 
