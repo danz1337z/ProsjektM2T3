@@ -207,6 +207,21 @@ const model = {
             Netflix: 'https://www.netflix.com/no-en/title/80200047',
             picture: 'https://img.reelgood.com/content/movie/11a73b1f-c936-4801-b208-59351bedca09/poster-780.webp',
         },
+        {
+            id: 23,
+            categoryId: [1],
+            title: "Baby Driver (2017)",
+            Netflix: 'https://www.netflix.com/no-en/title/80142090',
+            picture: 'https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_FMjpg_UX1000_.jpg',
+        },
+        {
+            id: 24,
+            categoryId: [1],
+            title: "Baby Driver (2017)",
+            Netflix: 'https://www.netflix.com/no-en/title/80142090',
+            picture: 'https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_FMjpg_UX1000_.jpg',
+        },
+
 
     ],
 
