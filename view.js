@@ -23,6 +23,7 @@ function login() {
     let html = `
     <br>
         <Center>
+        <br>
         <h1> ${model.app.currentpage} </h1>
         <input type = "text" onchange="model.inputs.startpage.login = this.value" placeholder ="User Name">
         <br><br>
@@ -54,6 +55,7 @@ function showmeny() {
 function loggpå() {
     let html = `
     ${showmeny()}
+    <br>
     <h1>Velkommen ${model.app.currentuser} </h1>`
     appDiv.innerHTML = html;
 }
@@ -117,6 +119,7 @@ function minside() {
     let html = `
     ${showmeny()}
     <center>
+    <br>
     <h1> ${model.app.currentpage} </h1>
     <img class="profilbilde" src="https://kvener.no/wp-content/uploads/2019/02/blank-profile-picture-973460_640.png"></img>
     <br><br>
@@ -137,6 +140,7 @@ function minside() {
 function favs() {
     let html = `
     ${showmeny()}
+    <br>
     <h1> Dine favoritter </h1>
      `;
     for (let i = 0; i < model.app.favOs.length; i++) {
@@ -376,6 +380,7 @@ function showUnderDokumentar() {
 function skjult() {
     let html = `
     ${showmeny()}
+    <br>
     <h1> Skjult innhold </h1>
      `;
     for (let i = 0; i < model.app.hide.length; i++) {

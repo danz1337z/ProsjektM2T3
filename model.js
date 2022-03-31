@@ -436,6 +436,97 @@ const model = {
             Netflix: 'https://www.netflix.com/no-en/title/81409217',
             picture: 'https://img.reelgood.com/content/movie/53a6d06c-4854-4f60-8fd9-45a4c3a24c1a/poster-780.webp',
         },
+        {
+            id: 41,
+            categoryId: [1],
+            title: "Mon Ami Le Traitre (1988)",
+            Netflix: 'https://www.netflix.com/no-en/title/81409510',
+            picture: 'https://pics.filmaffinity.com/mon_ami_le_traitre-510188047-large.jpg',
+        },
+        {
+            id: 42,
+            categoryId: [6, 8],
+            title: " Windfall (2022)",
+            Netflix: 'https://www.netflix.com/no-en/title/81483895',
+            picture: 'https://img.reelgood.com/content/movie/0a2bb0a6-f0db-4164-b286-2a88370b6ef1/poster-780.webp',
+        },
+        {
+            id: 50,
+            categoryId: [5, 8],
+            title: " Blade Runner 2049 (2017)",
+            Netflix: 'https://www.netflix.com/title/80185760',
+            primeVideo: 'https://www.amazon.com/gp/video/detail/amzn1.dv.gti.34af74ff-1897-37c0-1a65-a705f4eab2b3?tag=reelgood060d-20',
+
+            picture: 'https://img.reelgood.com/content/movie/433166eb-9404-44c2-b749-8b5d2a1e580a/poster-780.webp',
+        },
+        {
+            id: 43,
+            categoryId: [1, 2],
+            title: " Shrek 2 (2004)",
+            Netflix: 'https://www.netflix.com/no-en/title/60034572',
+            picture: 'https://img.reelgood.com/content/movie/34cacd51-cd68-4cfd-8f1c-4fec873f6313/poster-780.webp',
+        },
+        {
+            id: 44,
+            categoryId: [],
+            title: " ",
+            Netflix: 'https://www.netflix.com/no-en/title/70301344',
+            picture: '',
+        },
+        {
+            id: 45,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+        {
+            id: 46,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+        {
+            id: 47,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+        {
+            id: 48,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+        {
+            id: 49,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+        {
+            id: 51,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+        {
+            id: 52,
+            categoryId: [],
+            title: " ",
+            Netflix: '',
+            picture: '',
+        },
+
+
+
+
+
 
 
 

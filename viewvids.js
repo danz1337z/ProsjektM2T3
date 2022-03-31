@@ -30,6 +30,7 @@ const img_url = "https://image.tmdb.org/t/p/original";
 
 // requests for movies data 
 const requests = {
+    fetchLink: `${base_url}movie/ /*link*/ /watch/providers?${api}`,
     fetchPopular: `${base_url}/discover/movie?certification_country=NO&certification.lte=G&sort_by=popularity.desc&${api}`,
     fetchTrending: `${base_url}/trending/all/week?${api}&language=en-US`,
     fetchNetflixOrignals: `${base_url}/discover/tv?${api}&with_networks=213`,
@@ -59,6 +60,9 @@ const requests = {
     fetchDocumentaries: `${base_url}/discover/movie?${api}&with_genres=99`,
     fetchMovies: `${base_url}/genre/movie/list?${api}&language=en-US`,
 };
+
+// /watch/providers/regions
+
 function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
 }
@@ -66,6 +70,7 @@ function truncate(str, n) {
 function random() {
     let html = `
     ${showmeny()}
+    <br>
     <center>
         <h1> Velkommen ${model.app.currentuser}!</h1>
         <h3> Trykk på hjulet for å finne en tilfeldig film / serie </h3>
@@ -80,6 +85,7 @@ function random() {
                 <button id="banner__button" onclick="addFavoritt()">&#10084;</button>
             </div>
             <p id="banner__description"></p>
+            <p id="banner__link"></p>
         </div>
         <div id="banner__fadeBottom"></div>
     </header>
@@ -97,9 +103,12 @@ function random() {
             var banner = document.getElementById("banner");
             var banner_title = document.getElementById("banner__title");
             var banner__desc = document.getElementById("banner__description");
+            var banner__link = document.getElementById("banner__link");
             banner.style.backgroundImage = "url(" + img_url + setMovie.backdrop_path + ")";
             banner__desc.innerText = truncate(setMovie.overview, 200);
             banner_title.innerText = setMovie.original_title;
+            banner__link.innerText = setMovie.id;
+            console.log(setMovie.id);
         })
     appDiv.innerHTML = html;
 }
@@ -112,6 +121,7 @@ function movie() {
     let html = ``;
     html += `
     ${showmeny()}
+    <br>
     <h1> Filmer </h1>
     <!-- row -->
     <div id="headrow">
@@ -127,6 +137,7 @@ function movie() {
     fetch(requests.fetchActionMovies)
         .then((res) => res.json())
         .then((data) => {
+            console.log(data.results);
             const headrow = document.getElementById("headrow");
             const row = document.createElement("div");
             row.className = "row";
@@ -142,6 +153,7 @@ function movie() {
                 const poster = document.createElement("img");
                 poster.className = "row__poster";
                 var s2 = movie.id;
+                console.log(s2);
                 poster.id = s2;
                 poster.src = img_url + movie.poster_path;
                 row_posters.appendChild(poster);
@@ -372,6 +384,7 @@ function movie() {
 function series() {
     let html = `
     ${showmeny()}
+    <br>
     <h1> Serier </h1>
     <!-- row -->
     <div id="headrow">
