@@ -14,7 +14,7 @@ function addFavoritt(index) {
 //Funksjon som legger til favoritt random
 function addTilfeldig(index) {
     model.app.antallFavoritter++;
-    model.app.favOs.push(model.movies[index].title);
+    model.app.favOs.push(setMovie.original_title);
     random();
 }
 //Funksjon som skjuler film

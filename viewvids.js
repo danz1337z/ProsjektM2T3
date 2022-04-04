@@ -30,7 +30,7 @@ const img_url = "https://image.tmdb.org/t/p/original";
 
 // requests for movies data 
 const requests = {
-    fetchLink: `${base_url}movie/ /*link*/ /watch/providers?${api}`,
+    /*fetchLink: `${base_url}movie/${setMovie.id}/watch/providers?${api}`,*/
     fetchPopular: `${base_url}/discover/movie?certification_country=NO&certification.lte=G&sort_by=popularity.desc&${api}`,
     fetchTrending: `${base_url}/trending/all/week?${api}&language=en-US`,
     fetchNetflixOrignals: `${base_url}/discover/tv?${api}&with_networks=213`,
@@ -63,55 +63,7 @@ const requests = {
 
 // /watch/providers/regions
 
-function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-}
 
-function random() {
-    let html = `
-    ${showmeny()}
-    <br>
-    <center>
-        <h1> Velkommen ${model.app.currentuser}!</h1>
-        <h3> Trykk på hjulet for å finne en tilfeldig film / serie </h3>
-        <img src="spinning-shit.png" class="spinner" onclick = "random()"> 
-        <br><br>
-        <!-- banner -->
-    <header id="banner">
-        <div id="banner__contents">
-            <h1 id="banner__title"></h1>
-            <div id="banner__buttons">
-                <button id="banner__button">Play</button>
-                <button id="banner__button" onclick="addFavoritt()">&#10084;</button>
-            </div>
-            <p id="banner__description"></p>
-            <p id="banner__link"></p>
-        </div>
-        <div id="banner__fadeBottom"></div>
-    </header>
-        </center>
-        <div class="rand" id="random"></div>
-    `;
-
-    fetch(requests.fetchPopular)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data.results);
-            // every refresh the movie will be change
-            const setMovie = data.results[Math.floor(Math.random() * data.results.length - 1)];
-            console.log(setMovie);
-            var banner = document.getElementById("banner");
-            var banner_title = document.getElementById("banner__title");
-            var banner__desc = document.getElementById("banner__description");
-            var banner__link = document.getElementById("banner__link");
-            banner.style.backgroundImage = "url(" + img_url + setMovie.backdrop_path + ")";
-            banner__desc.innerText = truncate(setMovie.overview, 200);
-            banner_title.innerText = setMovie.original_title;
-            banner__link.innerText = setMovie.id;
-            console.log(setMovie.id);
-        })
-    appDiv.innerHTML = html;
-}
 
 function refresh() {
     window.location.reload("Refresh")
@@ -381,48 +333,3 @@ function movie() {
     appDiv.innerHTML = html;
 }
 
-function series() {
-    let html = `
-    ${showmeny()}
-    <br>
-    <h1> Serier </h1>
-    <!-- row -->
-    <div id="headrow">
-    <div class="row">
-    <h2 class="row__title"></h2>
-    <div class="row__posters">
-    <h3 class="movie_title"></h3>
-    </div>
-    </div>
-    </div>
-    `;
-
-    fetch(requests.fetchNetflixOrignals)
-        .then((res) => res.json())
-        .then((data) => {
-            const headrow = document.getElementById("headrow");
-            const row = document.createElement("div");
-            row.className = "row";
-            headrow.appendChild(row);
-            const title = document.createElement("h2");
-            title.className = "row__title";
-            row.appendChild(title);
-            const row_posters = document.createElement("div");
-            row_posters.className = "row__posters";
-            row.appendChild(row_posters);
-            data.results.forEach(movie => {
-                console.log(movie);
-                const poster = document.createElement("img");
-                poster.className = "row__poster";
-                var s2 = movie.id;
-                poster.id = s2;
-                poster.src = img_url + movie.poster_path;
-                row_posters.appendChild(poster);
-
-            });
-        });
-
-
-
-    appDiv.innerHTML = html;
-}
