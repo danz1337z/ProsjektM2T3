@@ -1,7 +1,3 @@
-let user = ["Benjamin"]
-let epost = ["epost@.no"]
-let pwd = ["*****"]
-let add = "";
 function minside() {
     let html = `
    
@@ -11,13 +7,17 @@ function minside() {
     <img class="profilbilde" src="http://img.gfx.no/1675/1675918/1200024500.jpg"></img>
     <br>
     <br>
-    <h2> Navn: ${user}</h2>
-    <h2> Epost: ${epost}</h2>  
-    <h2>Passord: ${pwd}</h2>
-    <input id="inpKey" oninput="add = this.value"><br>
-    <input class="fuck" type="button" Value ="Endre Navn" onclick = "endre()">
-    <input class="fuck" type="button" Value ="Endre Epost" onclick = "endre1()">
-    <input class="fuck" type="button" Value ="Endre Passord" onclick = "endre2()">
+    <h2> Navn: ${model.inputs.startpage.login}</h2>
+    <h2> Epost: ${model.app.currentepost}</h2>  
+    <h2></hh2>Password: <br><input type="password" value="${model.inputs.startpage.pwd}" id="myInput"></h2>
+    <h2><input type="checkbox" onclick="myFunction()">Show Password</h2>
+    <br>
+    <br>
+    <input id="inpKey" oninput="add = this.value"><br><br>
+    <input class="btn" type="submit" Value ="Endre Navn" onclick = "endre()"><br>
+    <input class="btn" type="button" Value ="Endre Epost" onclick = "endre1()"><br>
+    <input class="btn" type="submit" Value ="Endre Passord" onclick = "endre2()"><br>
+    </form>
     <br>
     <br>
     <div class="btn-group">
@@ -32,36 +32,14 @@ function minside() {
 }
 
 function endre() {
-    user = add;
+    model.inputs.startpage.login = add;
     updateView();
 }
 function endre1() {
-    epost = add;
+    model.app.currentepost = add;
     updateView();
 }
 function endre2() {
-    pwd = add;
+    model.inputs.startpage.pwd = add;
     updateView();
-}
-
-
-const inpKey = document.getElementById("inpKey");
-const inpValue = document.getElementById("inpValue");
-const btn2Insert = document.getElementById("btn2Insert");
-const lsOutput = document.getElementById("lsOutput");
-
-btn2Insert.onclick = function () {
-    const key = inpKey.value;
-    const value = inpValue.value;
-    if (key && value) {
-        localStorage.setItem(key, value);
-        location.reload();
-    }
-
-};
-
-function slett(index) {
-    localStorage.clear();
-    location.reload();
-
 }

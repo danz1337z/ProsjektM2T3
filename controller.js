@@ -32,6 +32,7 @@ function addTilfeldig(index) {
 function hideMovie(index) {
     model.app.antallHidet++;
     model.app.hide.push(model.movies[index].title);
+    model.app.hidePics.push(model.movies[index].picture);
     model.movies.splice(index, 1);
     movie();
 }
@@ -39,6 +40,7 @@ function hideMovie(index) {
 function hideSerie(index) {
     model.app.antallHidet++;
     model.app.hide.push(model.series[index].title);
+    model.app.favPics.push(model.series[index].picture);
     model.series.splice(index, 1);
     series();
 }
@@ -78,31 +80,12 @@ function loggpå() {
 }
 
 
-function spin() {
-    let random = Math.floor(Math.random() * model.movies.length);
-    for (let i = 0; i < model.movies.length; i++) {
-        document.getElementById("random").innerHTML = `
-        <center>
-        <img class= "bilde2" src="${model.movies[random].picture}"> 
-        <h3> ${model.movies[random].title}</h3>
-        <Button onclick="openInNewTab('${model.movies[random].Netflix}');"> Se den på Netflix</Button>
-        <Button onclick="openInNewTab('${model.movies[random].hbo}');"> Se den på HBO Max</Button>
-        <br>
-        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt-r" onclick="addTilfeldig(${random})">
-        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern-r" onclick="hideRandom(${random})">
-       </center>
-        `;
-
+//Show / Hide Pwd på minside
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
     }
 }
-
-// if (model.movies.Netflix = true) {
-//     const para = document.createElement("div");
-//     const node = document.createTextNode("<Button onclick='openInNewTab('${model.movies[random].Netflix}');'> Se den på Netflix</Button>")
-//     para.appendChild(node);
-
-//     const element = document.getElementById(playbtn);
-//     element.appendChild(para);
-// }
-
-
