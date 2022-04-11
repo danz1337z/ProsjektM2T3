@@ -21,8 +21,13 @@ const model = {
     // inputs til hver side
     inputs: {
         search: {
-            text: 'hei',
+            text: '',
         },
+        people: [
+            { name: 'Per', email: 'per@hotmail.no' },
+            { name: 'Pål', email: 'pål@hotmail.no' },
+            { name: 'Espen', email: 'espen@hotmail.no' },
+        ],
 
 
         // inputs til startside
@@ -41,7 +46,7 @@ const model = {
     ],
 
     categories: [
-        { categoryName: "Action", underCategory1: "Action-komedi", underCategory2: "Action-drama", categoryId: 1 },
+        { categoryName: "Action", categoryId: 1 },
         { categoryName: "Komedie", categoryId: 2 },
         { categoryName: "Romantikk", categoryId: 3 },
         { categoryName: "Skrekk", categoryId: 4 },
@@ -51,6 +56,109 @@ const model = {
         { categoryName: "Drama", categoryId: 8 },
         { categoryName: "Fantasy", categoryId: 9 },
         { categoryName: "Dokumentar", categoryId: 10 },
+    ],
+    undercategories: [
+        { categoryName: "Action", underCategory: "Action-Komedie", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Drama", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Fantasy", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Romantikk", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Skrekk", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Scifi", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Krim", categoryId: 1 },
+        { categoryName: "Action", underCategory: "Action-Thriller", categoryId: 1 },
+    ],
+    undercategories2: [
+        { categoryName: "Komedie", underCategory: "Komedie-Komedie", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Drama", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Fantasy", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Romantikk", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Skrekk", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Scifi", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Krim", categoryId: 2 },
+        { categoryName: "Komedie", underCategory: "Komedie-Thriller", categoryId: 2 },
+    ],
+    undercategories3: [
+        { categoryName: "Romantikk", underCategory: "Romantikk-Komedie", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Drama", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Fantasy", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Romantikk", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Skrekk", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Scifi", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Krim", categoryId: 3 },
+        { categoryName: "Romantikk", underCategory: "Romantikk-Thriller", categoryId: 3 },
+    ],
+    undercategories4: [
+        { categoryName: "Skrekk", underCategory: "Skrekk-Komedie", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Drama", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Fantasy", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Romantikk", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Skrekk", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Scifi", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Krim", categoryId: 4 },
+        { categoryName: "Skrekk", underCategory: "Skrekk-Thriller", categoryId: 4 },
+    ],
+    undercategories5: [
+        { categoryName: "Scifi", underCategory: "Scifi-Komedie", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Drama", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Fantasy", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Romantikk", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Skrekk", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Scifi", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Krim", categoryId: 5 },
+        { categoryName: "Scifi", underCategory: "Scifi-Thriller", categoryId: 5 },
+    ],
+    undercategories6: [
+        { categoryName: "Krim", underCategory: "Krim-Komedie", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Drama", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Fantasy", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Romantikk", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Skrekk", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Scifi", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Thriller", categoryId: 6 },
+        { categoryName: "Krim", underCategory: "Krim-Thriller", categoryId: 6 },
+
+    ],
+    undercategories7: [
+        { categoryName: "Thriller", underCategory: "Thriller-Komedie", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Drama", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Fantasy", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Romantikk", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Skrekk", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Scifi", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Thriller", categoryId: 7 },
+        { categoryName: "Thriller", underCategory: "Thriller-Thriller", categoryId: 7 },
+    ],
+    undercategories8: [
+        { categoryName: "Drama", underCategory: "Drama-Komedie", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Drama", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Fantasy", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Romantikk", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Skrekk", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Scifi", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Thriller", categoryId: 8 },
+        { categoryName: "Drama", underCategory: "Drama-Thriller", categoryId: 8 },
+
+    ],
+    undercategories9: [
+        { categoryName: "Fantasy", underCategory: "Fantasy-Komedie", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Drama", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Fantasy", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Romantikk", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Skrekk", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Scifi", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Thriller", categoryId: 9 },
+        { categoryName: "Fantasy", underCategory: "Fantasy-Thriller", categoryId: 9 },
+
+    ],
+    undercategories10: [
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Komedie", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Drama", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Fantasy", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Romantikk", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Skrekk", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Scifi", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Thriller", categoryId: 10 },
+        { categoryName: "Dokumentar", underCategory: "Dokumentar-Thriller", categoryId: 10 },
 
     ],
     hiddenMovies: [
@@ -590,7 +698,7 @@ const model = {
             appletv: '',
             hbo: '',
             amazon: "",
-            picture: 'https://medias.unifrance.org/medias/158/148/103582/format_affiche/my-friend-the-traitor.jpg',
+            picture: 'https://m.media-amazon.com/images/M/MV5BMmNmNTVlN2EtYTE0Yy00MzNmLWE4ZGYtN2I5ZDMyZDBmMGNlXkEyXkFqcGdeQXVyMTYzNTE3NDA@._V1_.jpg',
         },
         {
             id: 42,
@@ -917,7 +1025,7 @@ const model = {
             appletv: '',
             hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYbzrRAvf-ZPCKQEAAAAX:type:feature',
             amazon: "",
-            picture: 'https://upload.wikimedia.org/wikipedia/en/e/e7/Harry_Potter_20th_Anniversary_Return_to_Hogwarts_poster.jpg',
+            picture: 'https://m.media-amazon.com/images/M/MV5BMTIzMTZkM2ItYTgyNy00ZWNlLWExNGQtODk0YjdkOGE5ZjdiXkEyXkFqcGdeQXVyMjQ3MTc1MzI@._V1_.jpg',
         },
         {
             id: 67,
@@ -1008,7 +1116,7 @@ const model = {
             appletv: 'https://tv.apple.com/no/movie/disobedience/umc.cmc.4hye7pd02tm4a6zr209lspb8f',
             hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYYqdsgc-uMPDDgEAAAAf:type:feature',
             amazon: "",
-            picture: 'https://www.movienewsletters.net/photos/NOR_254634R1.jpg',
+            picture: 'https://img.reelgood.com/content/movie/00ec7742-c2d1-4501-ab0e-e15233444562/poster-780.webp',
         },
         {
             id: 74,
@@ -1164,7 +1272,7 @@ const model = {
             appletv: 'https://tv.apple.com/no/movie/tag/umc.cmc.4v17xn1ocz0m6tb2stzt7l1xw',
             hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYRaerQeoqDdFwwEAAAAj:type:feature',
             amazon: "",
-            picture: 'https://t2.gstatic.com/images?q=tbn:ANd9GcRUSp4bREnGFM6aE037o_VWQ6-UoE5N8OMDQP7jX2ieLT8f2IBG',
+            picture: 'https://img.reelgood.com/content/movie/604f20d1-a47d-448f-a72f-aac69e479c7a/poster-780.webp',
         },
         {
             id: 86,
@@ -1216,7 +1324,7 @@ const model = {
             appletv: 'https://tv.apple.com/no/movie/harry-potter-og-de-vises-stein/umc.cmc.55wxtmrughu40phd8lgr6qejr',
             hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYY7NkAImuJzDwgEAAAAL:type:feature',
             amazon: "",
-            picture: 'https://tulleruska.files.wordpress.com/2014/12/harry-potter-poster.jpg',
+            picture: 'https://img.reelgood.com/content/movie/419b5858-636e-491c-a9bd-050e3c080f48/poster-780.webp',
         },
         {
             id: 90,
@@ -1281,7 +1389,7 @@ const model = {
             appletv: 'https://tv.apple.com/no/movie/99-homes/umc.cmc.pvblrl2j7uqtoanab63fwei2',
             hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYfu6xAj5b3IkwgEAAAAD:type:feature',
             amazon: "",
-            picture: 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/6e08e8ee22892a7e24260d29d9cb07d7392757aa794ef45d187201aa261830fc._RI_V_TTW_.jpg',
+            picture: 'https://img.reelgood.com/content/movie/91c04346-8b01-4195-88a1-78ebb663e7b3/poster-780.webp',
         },
         {
             id: 95,

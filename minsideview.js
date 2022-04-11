@@ -4,7 +4,7 @@ function minside() {
     ${showmeny()}
     <center>
     <h1> ${model.app.currentpage} </h1>
-    <img class="profilbilde" src="http://img.gfx.no/1675/1675918/1200024500.jpg"></img>
+    <img class="profilbilde" src="https://cdn.discordapp.com/attachments/956493727042514984/963050366549782538/unknown.png"></img>
     <br>
     <br>
     <h2> Navn: ${model.inputs.startpage.login}</h2>

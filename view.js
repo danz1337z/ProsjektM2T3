@@ -17,6 +17,7 @@ function updateView() {
     if (side == "Min Side") minside();
     if (side == "search") search();
     if (side == "skjult") skjult();
+
 }
 
 function login() {
