@@ -20,13 +20,14 @@ function addFavoritt(index) {
 }
 //Funksjon som legger til favoritt random
 function addTilfeldig(index) {
+    if (model.app.favOs.includes(model.movies[index].title) == true) return
     model.app.antallFavoritter++;
     model.app.favOs.push(model.movies[index].title);
     model.app.favPics.push(model.movies[index].picture);
     model.app.netflixLinker.push(model.movies[index].Netflix);
     model.app.hboLinker.push(model.movies[index].hbo);
     model.app.viaplayLinker.push(model.movies[index].Viaplay);
-    random();
+    alert("Adda til fav xoxo")
 }
 //Funksjon som skjuler film
 function hideMovie(index) {

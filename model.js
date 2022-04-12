@@ -20,9 +20,7 @@ const model = {
     },
     // inputs til hver side
     inputs: {
-        search: {
-            text: '',
-        },
+
         people: [
             { name: 'Per', email: 'per@hotmail.no' },
             { name: 'Pål', email: 'pål@hotmail.no' },
@@ -36,8 +34,11 @@ const model = {
             pwd: "",
         },
         inputDropdown: "Action",
-    },
 
+    },
+    search: {
+        text: '',
+    },
 
     //data
 
@@ -184,13 +185,15 @@ const model = {
         },
         {
             id: 2,
+            categoryId: [1, 2],
             title: 'Amazing spiderman (2012)',
             Netflix: 'https://www.netflix.com/title/70208599',
+            hbo: '',
             viaplay: 'https://viaplay.no/watching?path=%2Fstore%2Fthe-amazing-spider-man-2012',
             youtube: 'https://www.youtube.com/watch?v=-xQ-ZPDh2Iw',
             googleplay: 'https://play.google.com/store/movies/details?id=-xQ-ZPDh2Iw',
             appletv: 'https://tv.apple.com/no/movie/the-amazing-spider-man/umc.cmc.1jielpphrkfkqh3zfll0un7iz?action=play',
-            amazon: "",
+            amazon: '',
             picture: 'https://musicart.xboxlive.com/7/66241200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080',
         },
         {
@@ -2676,4 +2679,5 @@ const model = {
             picture: 'https://img.reelgood.com/content/show/3c5169f6-41f9-467e-bd29-441a91309518/poster-780.webp',
         },
     ],
+
 };

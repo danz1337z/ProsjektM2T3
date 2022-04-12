@@ -29,7 +29,7 @@ function showUnderAction() {
     for (let i = 0; i < model.undercategories.length; i++) {
         let first = i % 2 == 0 ? 'first' : '';
         html += `
-        <div class="cell2${first} "></div>
+        <div class="cell2 ${first} "></div>
         <input type="button" onclick="categories()" class="catbutt" value="${model.undercategories[i].underCategory}">
         `;
     };
