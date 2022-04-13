@@ -26,6 +26,7 @@ function minside() {
     </div>
 
     </center>
+    <img onclick="icon()" src="https://cdn3.iconfinder.com/data/icons/user-interface-635/32/User_Interface_Night_Mode-256.png" id="icon">
     `;
 
     Covid.innerHTML = html;

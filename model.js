@@ -21,11 +21,7 @@ const model = {
     // inputs til hver side
     inputs: {
 
-        people: [
-            { name: 'Per', email: 'per@hotmail.no' },
-            { name: 'Pål', email: 'pål@hotmail.no' },
-            { name: 'Espen', email: 'espen@hotmail.no' },
-        ],
+
 
 
         // inputs til startside

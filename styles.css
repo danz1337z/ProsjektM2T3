@@ -13,6 +13,11 @@ body {
   background-color: rgb(37, 31, 37);
 }
 
+.dark-theme {
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
+}
+
 .bilde {
 
   height: 200px;
@@ -64,7 +69,8 @@ body {
 }
 
 html {
-  color: red;
+  color: #e60106;
+
   font-family: 'Netflix Sans', sans-serif;
 }
 
@@ -144,8 +150,8 @@ html {
 
 .btn-group .button {
 
-  background-color: red;
-  border: 1px solid red;
+  background-color: #e60106;
+  border: 1px solid #e60106;
   color: black;
   padding: 5px 10px;
   text-align: center;
@@ -199,6 +205,26 @@ html {
 }
 
 .search-button:hover {
+  transform: scale(1.3);
+}
+
+#icon {
+  max-width: 50px;
+  margin-left: 20px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.5s ease;
+}
+
+#icon:hover {
   transform: scale(1.3);
 }
 
@@ -266,4 +292,10 @@ html {
 .neon-btn:hover::after,
 .neon-btn:focus::after {
   opacity: 1;
+}
+
+.cinema1 {
+  height: 200px;
+  max-width: 1000px;
+  border: solid red 3px;
 }

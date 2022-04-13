@@ -9,7 +9,12 @@ function series() {
     let amazon = '';
     let html = `
     ${showmeny()}
+    <center>
     <h1> Serier </h1>
+    <h3> Trykk på hjulet for å finne en tilfeldig serie / random </h3>
+    <img src="spinning-shit.png" class="spinner" onclick = "spin2()">
+    <br><br>
+    </center>
     `;
 
     model.series.map(serie => html += ` <div class="cell">

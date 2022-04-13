@@ -17,6 +17,8 @@ function updateView() {
     if (side == "Min Side") minside();
     if (side == "search") search();
     if (side == "skjult") skjult();
+    if (side == "startside") startside();
+    if (side == "action-komedie") actionkomedie();
 
 }
 
@@ -29,7 +31,7 @@ function login() {
         <br><br>
         <input type = "password" onchange="model.inputs.startpage.pwd = this.value" placeholder ="Password">
         <br><br>
-        <a href="#" class="neon-btn" onclick ="random()">Login</a>
+        <a href="#" class="neon-btn" onclick ="startside()">Login</a>
         </Center>
     `;
     Covid.innerHTML = html;
@@ -38,14 +40,21 @@ function login() {
 function showmeny() {
     let html = /*html*/`
     <div class="btn-group">
+   
     <center>
     <Button type="button" class="button" onclick="changePage('Min Side')">Min Side</button>
     <Button type="button" class="button" onclick="changePage('Kategorier')">Kategorier</button>
-    <Button type="button" class="button" onclick="changePage('movie')">Alle filmer</button>
-    <Button type="button" class="button" onclick="changePage('series')">Alle serier</button>
-    <Button type="button" class="button" onclick="changePage('random')">Tilfeldig Film / Serie</button>
+    <Button type="button" class="button" onclick="changePage('movie')">Filmer</button>
+    <Button type="button" class="button" onclick="changePage('series')">Serier</button>
+    
+    <input
+    type="text" 
+    oninput="model.search.text=this.value"
+    value="${model.search.text || ''}"
+    />
     <Button type="button" class="search-button" onclick="changePage('search')">&#128269;</button>
     </center>
+   
 </div>
 
 
@@ -124,6 +133,54 @@ function skjult() {
 }
 
 
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
+
+
+function actionkomedie() {
+    let html = `
+    ${showmeny()}
+    <center>
+    <h2>Action Komedie</h2>
+    <h4>${model.movies[0].title}</h6>
+    <h4>${model.movies[1].title}</h4>
+    
+    <div>${movie.id}</div>
+    </center>
+
+    
+    
+    
+    `;
+
+    let Netflix = '';
+    let hbo = '';
+    let viaplay = '';
+    let youtube = '';
+    let googleplay = '';
+    let appleTv = '';
+    let amazon = '';
+
+    model.movies.map(movie => html += ` <div class="cell">
+    <center>
+    <img class="bilde" src="${movie.picture}"><br>
+    <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+    <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+    <br>
+    <b>Tittel: ${movie.title}</b><br>
+    <b>Tittel: ${movie.categoryId}</b><br>
+    ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+    ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+    ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+    ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+    ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+    ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+    ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+    </center>
+    </div>`).join(' ')
+    Covid.innerHTML = html;
+}
 function openInNewTab(url) {
     window.open(url, '_blank').focus();
 }
