@@ -47,20 +47,29 @@ function showmeny() {
     <Button type="button" class="button" onclick="changePage('movie')">Filmer</button>
     <Button type="button" class="button" onclick="changePage('series')">Serier</button>
     
+   
     <input
+    class="search-button" 
+    placeholder=" Søk "
     type="text" 
     oninput="model.search.text=this.value"
     value="${model.search.text || ''}"
     />
     <Button type="button" class="search-button" onclick="changePage('search')">&#128269;</button>
+    
     </center>
-   
-</div>
+    
 
 
     `;
     return html;
 }
+
+// </div>
+// <div class="inputContainer">
+// <i class="fa fa-user icon"> </i>
+// <input class="Field" type="text" placeholder="Søk" />
+// </div>
 
 function loggpå() {
     let html = `
