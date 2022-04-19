@@ -4,7 +4,7 @@ function movie() {
     ${showmeny()}
     <center>
     <h1> Filmer </h1>
-    <h3> Trykk på hjulet for å finne en tilfeldig film / random Film </h3>
+    <h3> Trykk på hjulet for å finne en tilfeldig film</h3>
     <img src="spinning-shit.png" class="spinner" onclick = "spin()">
     <br><br>
     </center>

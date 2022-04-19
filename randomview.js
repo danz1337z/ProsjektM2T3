@@ -5,7 +5,7 @@ function random() {
 
     <center>
     <h1> Velkommen ${model.inputs.startpage.login}!</h1>
-    <h3> Trykk på hjulet for å finne en tilfeldig film / random </h3>
+    <h3> Trykk på hjulet for å finne en tilfeldig film </h3>
     <img src="spinning-shit.png" class="spinner" onclick = "spin()">
     <br><br>
     </center>
@@ -69,7 +69,7 @@ function spin() {
     ${showmeny()}
     <center>
     <h1> Velkommen ${model.inputs.startpage.login}!</h1>
-    <h3> Trykk på hjulet for å finne en tilfeldig film / random </h3>
+    <h3> Trykk på hjulet for å finne en tilfeldig film</h3>
     <img src="spinning-shit.png" class="spinner" onclick = "spin()">
     <br><br>
     </center>

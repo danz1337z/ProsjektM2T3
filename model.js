@@ -1469,6 +1469,20 @@ const model = {
             picture: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzgVDufQ-YlHRzffc1Ar-5Qwb_lrd6xRgYKTzco4p17awu-qJp",
         },
 
+        {
+            id: 101,
+            categoryId: [],
+            title: "Din gris!",
+            Netflix: '',
+            viaplay: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
+            youtube: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
+            googleplay: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
+            appletv: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
+            hbo: "https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/",
+            amazon: "",
+            picture: "https://www.kondomeriet.no/globalassets/aa_produktbilder/for-menn/fleshlight/120853-fleshlight-pink-lady-destroya.jpg?height=461&quality=75&format=webp",
+        },
+
 
     ],
 
@@ -1476,6 +1490,7 @@ const model = {
     series: [
         {
             id: 1,
+            categoryId: [1, 2, 3],
             title: 'The Mentalist',
             Netflix: '',
             viaplay: '',

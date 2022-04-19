@@ -8,6 +8,9 @@ function search() {
     ${grandioseTanker()}
     ${grandiosaTanker()}
     </ul>
+
+   
+
 `;
     Covid.innerHTML = html;
 }
@@ -32,7 +35,7 @@ function grandioseTanker() {
     for (let i = 0; i < movies.length; i++) {
         const resultat = movies[i];
         html += /*html*/`
-            <li>${resultat.title}  ${resultat.Netflix}</li>
+            <li>${resultat.title} </li>
             <hr>
         `;
     }

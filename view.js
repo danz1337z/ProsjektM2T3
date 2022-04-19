@@ -1,3 +1,4 @@
+
 let Covid = document.getElementById('app');
 
 function changePage(side) {
@@ -25,6 +26,7 @@ function updateView() {
 function login() {
     let html = `
     <br>
+    <button  class="logg" onclick="icon()"><box-icon type='solid' name='moon'></box-icon></button>
         <Center>
         <h1>${model.inputs.startpage.login}</h1>
         <input type = "text" onchange="model.inputs.startpage.login = this.value" placeholder ="User Name">
@@ -42,24 +44,25 @@ function showmeny() {
     <div class="btn-group">
    
     <center>
+    <button  class="butt" onclick="icon()"><box-icon type='solid' name='moon'></box-icon></button>
     <Button type="button" class="button" onclick="changePage('Min Side')">Min Side</button>
     <Button type="button" class="button" onclick="changePage('Kategorier')">Kategorier</button>
     <Button type="button" class="button" onclick="changePage('movie')">Filmer</button>
     <Button type="button" class="button" onclick="changePage('series')">Serier</button>
     
+    
    
-    <input
-    class="search-button" 
+    <input class="button"
     placeholder=" Søk "
-    type="text" 
     oninput="model.search.text=this.value"
     value="${model.search.text || ''}"
+
     />
-    <Button type="button" class="search-button" onclick="changePage('search')">&#128269;</button>
-    
+    <button class="butt" onclick="changePage('search')">&#128269;</button>
+  
     </center>
     
-
+</div>
 
     `;
     return html;
@@ -108,7 +111,9 @@ function categories() {
 ${showmeny()}
     <h1> Kategorier </h1>`;
     for (let i = 0; i < model.categories.length; i++) {
-        html += `<button onclick="showUnder()">${model.categories[i].categoryName} </button>`;
+        html += `<div class="cell">
+        <button onclick="showUnder()">${model.categories[i].categoryName} </button>
+        </div>`;
     }
     Covid.innerHTML = html;
 }
@@ -118,7 +123,9 @@ function showUnder() {
     ${showmeny()}
     <h1> Underkategorier </h1>`;
     for (let i = 0; i < model.categories.length; i++) {
-        html += `<button> ${model.categories[i].underCategory1}</button>`
+        html += `<div class="cell">
+        <button> ${model.categories[i].underCategory1}</button>
+        </div>`
 
     }
 
@@ -148,48 +155,41 @@ function openInNewTab(url) {
 
 
 function actionkomedie() {
-    let html = `
+
+    const listOfMovies = [{ id: 0, name: "1" }, { id: 1, name: "1" }];
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(1) && movie.categoryId.includes(2)));
+    console.log(actionComedyMovies)
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
     ${showmeny()}
     <center>
+
     <h2>Action Komedie</h2>
-    <h4>${model.movies[0].title}</h6>
-    <h4>${model.movies[1].title}</h4>
+    <Button type="button" class="button" onclick="changePage('Kategorier')">Back<-</button>
+    <h4>${movieHtml}</h4>
     
-    <div>${movie.id}</div>
     </center>
-
-    
-    
-    
     `;
-
-    let Netflix = '';
-    let hbo = '';
-    let viaplay = '';
-    let youtube = '';
-    let googleplay = '';
-    let appleTv = '';
-    let amazon = '';
-
-    model.movies.map(movie => html += ` <div class="cell">
-    <center>
-    <img class="bilde" src="${movie.picture}"><br>
-    <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
-    <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
-    <br>
-    <b>Tittel: ${movie.title}</b><br>
-    <b>Tittel: ${movie.categoryId}</b><br>
-    ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
-    ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
-    ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
-    ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
-    ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
-    ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
-    ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
-    </center>
-    </div>`).join(' ')
     Covid.innerHTML = html;
-}
-function openInNewTab(url) {
-    window.open(url, '_blank').focus();
 }

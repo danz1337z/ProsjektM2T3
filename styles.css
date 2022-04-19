@@ -10,30 +10,33 @@
 }
 
 body {
-  background-color: rgb(37, 31, 37);
+  background-color: rgb(196, 173, 173);
+}
+
+body.dark-theme {
+  background-color: var(--secondery-color);
 }
 
 .dark-theme {
-  --clr-neon: hsl(317 100% 54%);
-  --clr-bg: hsl(323 21% 16%);
+  --secondery-color: rgb(12, 12, 12);
 }
 
 .bilde {
 
   height: 200px;
   max-width: 1000px;
-  border: solid red 3px;
+  border: solid #e60106 3px;
 }
 
 .bilde2 {
   max-height: 400px;
   max-width: 400px;
-  border: solid red 6px;
+  border: solid #e60106 6px;
 }
 
 .catbutt {
-  background-color: rgb(141, 24, 24);
-  border: 1px solid rgb(141, 24, 24);
+  background-color: #e60106;
+  border: 1px solid #e60106;
   color: rgb(255, 255, 255);
   padding: 5px;
   margin: 5px;
@@ -50,11 +53,11 @@ body {
 
 .cell {
   float: left;
-
+  padding-top: 10px;
   margin: 10px;
   width: 300px;
   height: 500px;
-  border: solid 2px gray;
+  border: solid 5px #e60106;
 }
 
 .first {
@@ -64,8 +67,16 @@ body {
 .profilbilde {
   max-height: 200px;
   max-width: 200px;
-  border-radius: 50px;
-  border: solid red 3px;
+  border-radius: 20px;
+  border: solid #e60106 5px;
+}
+
+.ramme {
+  border: solid #e60106 5px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: left;
+  padding: 22px;
 }
 
 html {
@@ -128,7 +139,7 @@ html {
 
 
 .spinner {
-  border: solid red 6px;
+  border: solid #e60106 6px;
   border-radius: 100px;
   width: 100px;
   height: 100px;
@@ -164,8 +175,8 @@ html {
 
 .btn-group .button:hover {
   opacity: 0.7;
-  background-color: red;
-  border: 1px solid red;
+  background-color: #e60106;
+  border: 1px solid #e60106;
   color: black;
   padding: 5px 10px;
   text-align: center;
@@ -191,8 +202,8 @@ html {
 .search-button {
   width: 15%;
   opacity: 0.7;
-  background-color: red;
-  border: 1px solid red;
+  background-color: #e60106;
+  border: 1px solid #e60106;
   color: black(255, 0, 0);
   padding: 5px 10px;
   text-align: left;
@@ -204,7 +215,22 @@ html {
 
 }
 
+.butt {
+  line-height: 34px;
+  background-color: #e60106;
+  border: 1px solid #e60106;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.butt:hover {
+  opacity: 0.7;
+}
 
 ::placeholder {
   color: rgb(10, 10, 10);
@@ -226,8 +252,8 @@ html {
 #icon {
   max-width: 50px;
   margin-left: 20px;
-  background-color: red;
-  border: 1px solid red;
+  background-color: #e60106;
+  border: 1px solid #e60106;
   border-radius: 20px;
   color: black;
   text-align: center;
@@ -312,5 +338,10 @@ html {
 .cinema1 {
   height: 200px;
   max-width: 1000px;
-  border: solid red 3px;
+  border: solid #e60106 3px;
+}
+
+.logg {
+  border: solid hsl(317 100% 54%) 2px;
+  box-shadow: 0 0 1em 0.2em var(--clr-neon);
 }

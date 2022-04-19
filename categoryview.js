@@ -22,16 +22,17 @@ function categories() {
 function showUnderAction() {
     let html = `
     ${showmeny()}
+    <Button type="button" class="button" onclick="changePage('Kategorier')">&#11013;</button>
     <center>
     <br>
     <h1> Underkategorier </h1>
     </center>`;
     for (let i = 0; i < model.undercategories.length; i++) {
         let first = i % 2 == 0 ? 'first' : '';
-        html += `
+        html += `<center>
         <div class="cell2 ${first} "></div>
         <input type="button" onclick="actionkomedie()" class="catbutt" value="${model.undercategories[i].underCategory}">
-        `;
+        </center>`;
     };
 
     Covid.innerHTML = html;

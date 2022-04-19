@@ -157,7 +157,7 @@ function spin() {
     html = `
     ${showmeny()}
     <center>
-    <h3> Trykk på hjulet for å finne en tilfeldig film / random </h3>
+    <h3> Trykk på hjulet for å finne en tilfeldig film</h3>
     <img src="spinning-shit.png" class="spinner" onclick = "spin()">
     <br><br>
     </center>
@@ -198,7 +198,7 @@ function spin2() {
     html = `
     ${showmeny()}
     <center>
-    <h3> Trykk på hjulet for å finne en tilfeldig film / random </h3>
+    <h3> Trykk på hjulet for å finne en tilfeldig serie</h3>
     <img src="spinning-shit.png" class="spinner" onclick = "spin2()">
     <br><br>
     </center>
