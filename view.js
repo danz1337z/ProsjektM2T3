@@ -20,6 +20,13 @@ function updateView() {
     if (side == "skjult") skjult();
     if (side == "startside") startside();
     if (side == "action-komedie") actionkomedie();
+    if (side == "action-Drama") actiondrama();
+    if (side == "action-Fantasy") actionfantasy();
+    if (side == "action-Romantikk") actionromantikk();
+    if (side == "action-Skrekk") actionskrekk();
+    if (side == "action-Scifi") actionscifi();
+    if (side == "action-Krim") actionkrim();
+    if (side == "action-Thriller") actionthriller();
 
 }
 
@@ -41,6 +48,7 @@ function login() {
 
 function showmeny() {
     let html = /*html*/`
+   
     <div class="btn-group">
    
     <center>
@@ -52,13 +60,13 @@ function showmeny() {
     
     
    
-    <input class="button"
+    <input id="myInput" class="search-button"
     placeholder=" Søk "
     oninput="model.search.text=this.value"
     value="${model.search.text || ''}"
 
     />
-    <button class="butt" onclick="changePage('search')">&#128269;</button>
+    <button id="myBtn" class="butt" onclick="changePage('search')">&#128269;</button>
   
     </center>
     
@@ -151,45 +159,4 @@ function skjult() {
 
 function openInNewTab(url) {
     window.open(url, '_blank').focus();
-}
-
-
-function actionkomedie() {
-
-    const listOfMovies = [{ id: 0, name: "1" }, { id: 1, name: "1" }];
-
-    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(1) && movie.categoryId.includes(2)));
-    console.log(actionComedyMovies)
-
-    let movieHtml = "";
-    actionComedyMovies.forEach(movie =>
-        movieHtml += `<div class="cell">
-        <center>
-        <img class="bilde" src="${movie.picture}"><br>
-        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
-        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
-        <br>
-        <b>Tittel: ${movie.title}</b><br>
-        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
-        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
-        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
-        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
-        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
-        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
-        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
-        </center>
-        </div>`
-    );
-
-    html = `
-    ${showmeny()}
-    <center>
-
-    <h2>Action Komedie</h2>
-    <Button type="button" class="button" onclick="changePage('Kategorier')">Back<-</button>
-    <h4>${movieHtml}</h4>
-    
-    </center>
-    `;
-    Covid.innerHTML = html;
 }

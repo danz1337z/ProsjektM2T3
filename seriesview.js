@@ -7,6 +7,9 @@ function series() {
     let googleplay = '';
     let appleTv = '';
     let amazon = '';
+    let tv2 = '';
+    let disney = '';
+    let discovery = '';
     let html = `
     ${showmeny()}
     <center>
@@ -31,6 +34,9 @@ function series() {
     ${googleplay = serie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${serie.googleplay}');">` : ''}
     ${appleTV = serie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${serie.appletv}');">` : ''}
     ${amazon = serie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${serie.amazon}');">` : ''}
+    ${tv2 = serie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${serie.tv2}');">` : ''}
+    ${disney = serie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${serie.disney}');">` : ''}
+    ${discovery = serie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${serie.discovery}');">` : ''}
     </center>
     </div>`).join(' ')
     Covid.innerHTML = html;

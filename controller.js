@@ -123,12 +123,6 @@ let serviceList = [{
 }];
 
 
-let arr = model.movies.filter(function (item) {
-    return activeIds.indexOf(item.categoryId) === -1;
-});
-
-console.log(arr);
-
 
 function spin() {
     let random = Math.floor(Math.random() * model.movies.length);
@@ -143,13 +137,16 @@ function spin() {
     <br>
     ${Netflix = model.movies[random].Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.movies[random].Netflix}');">` : ''}
     ${hbo = model.movies[random].hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.movies[random].hbo}');">` : ''}
-    ${model.movies[random].viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.movies[random].viaplay}');">` : ''}
+    ${viaplay = model.movies[random].viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.movies[random].viaplay}');">` : ''}
     <br>
     <br>
     ${youtube = model.movies[random].youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.movies[random].youtube}');">` : ''}
     ${googleplay = model.movies[random].googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.movies[random].googleplay}');">` : ''}
     ${appleTV = model.movies[random].appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.movies[random].appletv}');">` : ''}
     ${amazon = model.movies[random].amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.movies[random].amazon}');">` : ''}
+    ${tv2 = model.movies[random].tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.movies[random].tv2}');">` : ''}
+    ${disney = model.movies[random].disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.movies[random].disney}');">` : ''}
+    ${discovery = model.movies[random].discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${model.movies[random].discovery}');">` : ''}
     </center>
 
     `;
@@ -184,13 +181,16 @@ function spin2() {
     <br>
     ${Netflix = model.series[random].Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.series[random].Netflix}');">` : ''}
     ${hbo = model.series[random].hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.series[random].hbo}');">` : ''}
-    ${model.series[random].viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.series[random].viaplay}');">` : ''}
+    ${viaplay = model.series[random].viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.series[random].viaplay}');">` : ''}
     <br>
     <br>
     ${youtube = model.series[random].youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.series[random].youtube}');">` : ''}
     ${googleplay = model.series[random].googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.series[random].googleplay}');">` : ''}
     ${appleTV = model.series[random].appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.series[random].appletv}');">` : ''}
     ${amazon = model.series[random].amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.series[random].amazon}');">` : ''}
+    ${tv2 = model.series[random].tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.series[random].tv2}');">` : ''}
+    ${disney = model.series[random].disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.series[random].disney}');">` : ''}
+    ${discovery = model.series[random].discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${model.series[random].discovery}');">` : ''}
     </center>
 
     `;
