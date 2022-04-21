@@ -2,7 +2,7 @@ function search() {
     let html = /*html*/`
     ${showmeny()}
     <center>
-    <h4>Søkeresultater:</h4>
+    <h1>Søkeresultater:</h1>
     </center>
     <ul>
     ${grandioseTanker()}

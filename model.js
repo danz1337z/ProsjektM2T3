@@ -54,110 +54,7 @@ const model = {
         { categoryName: "Fantasy", categoryId: 9 },
         { categoryName: "Dokumentar", categoryId: 10 },
     ],
-    // undercategories: [
-    //     { categoryName: "Action", underCategory: "Action-Komedie", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Drama", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Fantasy", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Romantikk", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Skrekk", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Scifi", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Krim", categoryId: 1 },
-    //     { categoryName: "Action", underCategory: "Action-Thriller", categoryId: 1 },
-    // ],
-    // undercategories2: [
-    //     { categoryName: "Komedie", underCategory: "Komedie-Komedie", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Drama", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Fantasy", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Romantikk", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Skrekk", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Scifi", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Krim", categoryId: 2 },
-    //     { categoryName: "Komedie", underCategory: "Komedie-Thriller", categoryId: 2 },
-    // ],
-    // undercategories3: [
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Komedie", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Drama", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Fantasy", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Romantikk", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Skrekk", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Scifi", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Krim", categoryId: 3 },
-    //     { categoryName: "Romantikk", underCategory: "Romantikk-Thriller", categoryId: 3 },
-    // ],
-    // undercategories4: [
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Komedie", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Drama", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Fantasy", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Romantikk", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Skrekk", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Scifi", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Krim", categoryId: 4 },
-    //     { categoryName: "Skrekk", underCategory: "Skrekk-Thriller", categoryId: 4 },
-    // ],
-    // undercategories5: [
-    //     { categoryName: "Scifi", underCategory: "Scifi-Komedie", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Drama", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Fantasy", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Romantikk", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Skrekk", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Scifi", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Krim", categoryId: 5 },
-    //     { categoryName: "Scifi", underCategory: "Scifi-Thriller", categoryId: 5 },
-    // ],
-    // undercategories6: [
-    //     { categoryName: "Krim", underCategory: "Krim-Komedie", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Drama", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Fantasy", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Romantikk", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Skrekk", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Scifi", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Thriller", categoryId: 6 },
-    //     { categoryName: "Krim", underCategory: "Krim-Thriller", categoryId: 6 },
 
-    // ],
-    // undercategories7: [
-    //     { categoryName: "Thriller", underCategory: "Thriller-Komedie", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Drama", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Fantasy", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Romantikk", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Skrekk", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Scifi", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Thriller", categoryId: 7 },
-    //     { categoryName: "Thriller", underCategory: "Thriller-Thriller", categoryId: 7 },
-    // ],
-    // undercategories8: [
-    //     { categoryName: "Drama", underCategory: "Drama-Komedie", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Drama", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Fantasy", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Romantikk", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Skrekk", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Scifi", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Thriller", categoryId: 8 },
-    //     { categoryName: "Drama", underCategory: "Drama-Thriller", categoryId: 8 },
-
-    // ],
-    // undercategories9: [
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Komedie", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Drama", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Fantasy", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Romantikk", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Skrekk", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Scifi", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Thriller", categoryId: 9 },
-    //     { categoryName: "Fantasy", underCategory: "Fantasy-Thriller", categoryId: 9 },
-
-    // ],
-    // undercategories10: [
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Komedie", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Drama", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Fantasy", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Romantikk", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Skrekk", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Scifi", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Thriller", categoryId: 10 },
-    //     { categoryName: "Dokumentar", underCategory: "Dokumentar-Thriller", categoryId: 10 },
-
-    // ],
     hiddenMovies: [
         { userId: 1, listOfHiddenMovies: [1, 2] },
     ],
@@ -169,7 +66,7 @@ const model = {
         {
             id: 1,
             categoryId: [1, 2, 9, 5],
-            title: 'Spiderman (2002)',
+            title: 'Spider-Man (2002)',
             Netflix: 'https://www.netflix.com/title/60004481',
             hbo: 'https://play.hbomax.com/page/urn:hbo:page:GYeg4RQeJUMINtwEAAAHk:type:feature',
             viaplay: 'https://viaplay.no/watching?path=%2Ffilmer%2Fspider-man-2002',
@@ -185,7 +82,7 @@ const model = {
         {
             id: 2,
             categoryId: [1, 2, 9, 5],
-            title: 'Amazing spiderman (2012)',
+            title: 'The Amazing Spider-Man (2012)',
             Netflix: 'https://www.netflix.com/title/70208599',
             hbo: '',
             viaplay: 'https://viaplay.no/watching?path=%2Fstore%2Fthe-amazing-spider-man-2012',
@@ -568,7 +465,7 @@ const model = {
         },
         {
             id: 26,
-            categoryId: [2, 5,],
+            categoryId: [2, 5, 8],
             title: "The Adam Project (2022)",
             Netflix: 'https://www.netflix.com/no-en/title/81309354',
             viaplay: '',
@@ -584,7 +481,7 @@ const model = {
         },
         {
             id: 27,
-            categoryId: [1],
+            categoryId: [1, 6, 8, 7, 9],
             title: "The Italian Job (2003)",
             Netflix: 'https://www.netflix.com/no-en/title/60027706',
             viaplay: 'https://viaplay.no/store/the-italian-job-2003',
@@ -600,7 +497,7 @@ const model = {
         },
         {
             id: 28,
-            categoryId: [1],
+            categoryId: [1, 9, 7, 6],
             title: "Kill Bill: Vol. 1 (2003)",
             Netflix: 'https://www.netflix.com/no-en/title/60031236',
             viaplay: 'https://viaplay.no/filmer/kill-bill-volume-1-2003',
@@ -616,7 +513,7 @@ const model = {
         },
         {
             id: 29,
-            categoryId: [1],
+            categoryId: [1, 2, 9, 7, 8, 6],
             title: "Kill Bill: Vol. 2 (2004)",
             Netflix: 'https://www.netflix.com/no-en/title/60032563',
             viaplay: 'https://viaplay.no/filmer/kill-bill-volume-2-2004',
@@ -632,7 +529,7 @@ const model = {
         },
         {
             id: 30,
-            categoryId: [1],
+            categoryId: [1, 7],
             title: "The Marksman (2021)",
             Netflix: 'https://www.netflix.com/no-en/title/81404853',
             viaplay: 'https://viaplay.no/store/the-marksman-2021',
@@ -648,7 +545,7 @@ const model = {
         },
         {
             id: 31,
-            categoryId: [1],
+            categoryId: [2, 8],
             title: "Irresistible (2020)",
             Netflix: 'https://www.netflix.com/no-en/title/81249604',
             viaplay: '',
@@ -664,7 +561,7 @@ const model = {
         },
         {
             id: 32,
-            categoryId: [1],
+            categoryId: [6],
             title: "Boulevard des assassins (1982)",
             Netflix: 'https://www.netflix.com/no-en/title/81441754',
             viaplay: '',
@@ -680,7 +577,7 @@ const model = {
         },
         {
             id: 33,
-            categoryId: [1],
+            categoryId: [2],
             title: "Crash Pad (2017)",
             Netflix: 'https://www.netflix.com/no-en/title/80211995',
             viaplay: 'https://viaplay.no/store/crash-pad-2017',
@@ -696,7 +593,7 @@ const model = {
         },
         {
             id: 34,
-            categoryId: [1],
+            categoryId: [0],
             title: "le chanteur de mexico (1965)",
             Netflix: 'https://www.netflix.com/no-en/title/81409353',
             viaplay: '',
@@ -712,7 +609,7 @@ const model = {
         },
         {
             id: 35,
-            categoryId: [1],
+            categoryId: [0],
             title: "Flying Scot (1958)",
             Netflix: 'https://www.netflix.com/no-en/title/81409424',
             viaplay: '',
@@ -728,7 +625,7 @@ const model = {
         },
         {
             id: 36,
-            categoryId: [1],
+            categoryId: [2],
             title: "French Fried Vacation 3 (2006)",
             Netflix: 'https://www.netflix.com/no-en/title/81409340',
             viaplay: '',
@@ -744,7 +641,7 @@ const model = {
         },
         {
             id: 37,
-            categoryId: [1],
+            categoryId: [2],
             title: "It's Great to Be Young (1956)",
             Netflix: 'https://www.netflix.com/no-en/title/81409563',
             viaplay: '',
@@ -760,7 +657,7 @@ const model = {
         },
         {
             id: 38,
-            categoryId: [1],
+            categoryId: [0],
             title: "Je veux tout (1999)",
             Netflix: 'https://www.netflix.com/no-en/title/81441803',
             viaplay: '',
@@ -776,7 +673,7 @@ const model = {
         },
         {
             id: 39,
-            categoryId: [1],
+            categoryId: [0],
             title: "Le capitaine Fracasse (1943)",
             Netflix: 'https://www.netflix.com/no-en/title/81409356',
             viaplay: '',
@@ -792,7 +689,7 @@ const model = {
         },
         {
             id: 40,
-            categoryId: [1],
+            categoryId: [0],
             title: "Max og Léons spinnville reise (2016)",
             Netflix: 'https://www.netflix.com/no-en/title/81409217',
             viaplay: '',
@@ -808,7 +705,7 @@ const model = {
         },
         {
             id: 41,
-            categoryId: [1],
+            categoryId: [0],
             title: "Mon Ami Le Traitre (1988)",
             Netflix: 'https://www.netflix.com/no-en/title/81409510',
             viaplay: '',
@@ -824,7 +721,7 @@ const model = {
         },
         {
             id: 42,
-            categoryId: [6, 8],
+            categoryId: [8, 6, 7],
             title: " Windfall (2022)",
             Netflix: 'https://www.netflix.com/no-en/title/81483895',
             viaplay: '',
@@ -840,7 +737,7 @@ const model = {
         },
         {
             id: 43,
-            categoryId: [5, 8],
+            categoryId: [5, 1, 9, 7],
             title: " Blade Runner 2049 (2017)",
             Netflix: 'https://www.netflix.com/title/80185760',
             viaplay: 'https://viaplay.no/store/blade-runner-2049-2017',
@@ -857,7 +754,7 @@ const model = {
         },
         {
             id: 44,
-            categoryId: [1, 2],
+            categoryId: [1, 2, 9],
             title: " Shrek 2 (2004)",
             Netflix: 'https://www.netflix.com/no-en/title/60034572',
             viaplay: 'https://viaplay.no/filmer/shrek-2-2004',
@@ -873,7 +770,7 @@ const model = {
         },
         {
             id: 45,
-            categoryId: [1, 6, 7],
+            categoryId: [1, 6, 7, 8],
             title: " London Has Fallen (2016)",
             Netflix: 'https://www.netflix.com/no-en/title/70301344',
             viaplay: 'https://viaplay.no/filmer/london-has-fallen-2016',
@@ -905,7 +802,7 @@ const model = {
         },
         {
             id: 47,
-            categoryId: [1, 3],
+            categoryId: [1, 3, 8],
             title: " The Last of the Mohicans (1992)",
             Netflix: 'https://www.netflix.com/no-en/title/686619',
             viaplay: 'https://viaplay.no/filmer/den-siste-mohikaner-1992',
@@ -937,7 +834,7 @@ const model = {
         },
         {
             id: 49,
-            categoryId: [1, 8],
+            categoryId: [1, 9, 5, 7, 8],
             title: " The Book of Eli (2010)",
             Netflix: 'https://www.netflix.com/no-en/title/70114342',
             viaplay: 'https://viaplay.no/store/the-book-of-eli-2010',
@@ -953,7 +850,7 @@ const model = {
         },
         {
             id: 50,
-            categoryId: [1, 2],
+            categoryId: [1, 2, 6],
             title: " The Other Guys (2010)",
             Netflix: 'https://www.netflix.com/no-en/title/70127228',
             viaplay: 'https://viaplay.no/store/the-other-guys-2010',
@@ -985,7 +882,7 @@ const model = {
         },
         {
             id: 52,
-            categoryId: [],
+            categoryId: [7, 6, 8],
             title: "Kimi (2022)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/kimi-2022',
@@ -1001,7 +898,7 @@ const model = {
         },
         {
             id: 53,
-            categoryId: [],
+            categoryId: [5, 1, 9, 8],
             title: "Dune (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/dune-2021',
@@ -1017,7 +914,7 @@ const model = {
         },
         {
             id: 54,
-            categoryId: [],
+            categoryId: [8],
             title: "The Fallout (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-fallout-2022',
@@ -1033,7 +930,7 @@ const model = {
         },
         {
             id: 55,
-            categoryId: [],
+            categoryId: [1, 5, 9],
             title: "The Matrix Resurrections (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-matrix-resurrections-2021',
@@ -1049,7 +946,7 @@ const model = {
         },
         {
             id: 56,
-            categoryId: [],
+            categoryId: [1, 5, 9],
             title: "The Suicide Squad (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-suicide-squad-2021-2021',
@@ -1065,7 +962,7 @@ const model = {
         },
         {
             id: 57,
-            categoryId: [],
+            categoryId: [6, 8],
             title: "The Many Saints of Newark (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-many-saints-of-newark-2021',
@@ -1081,7 +978,7 @@ const model = {
         },
         {
             id: 58,
-            categoryId: [],
+            categoryId: [2, 8],
             title: "Once Upon a Time... in Hollywood (2019)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/once-upon-a-time...-in-hollywood-2019',
@@ -1097,7 +994,7 @@ const model = {
         },
         {
             id: 59,
-            categoryId: [],
+            categoryId: [5, 7, 3, 8],
             title: "Reminiscence (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/reminiscence-2021',
@@ -1113,7 +1010,7 @@ const model = {
         },
         {
             id: 60,
-            categoryId: [],
+            categoryId: [8, 7],
             title: "Cry Macho (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/cry-macho-2021',
@@ -1129,7 +1026,7 @@ const model = {
         },
         {
             id: 61,
-            categoryId: [],
+            categoryId: [1, 2, 9, 5],
             title: "Space Jam: A New Legacy (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/space-jam-en-ny-legende-2021',
@@ -1145,7 +1042,7 @@ const model = {
         },
         {
             id: 62,
-            categoryId: [],
+            categoryId: [8, 6],
             title: "Judas and the Black Messiah (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/judas-and-the-black-messiah-2021',
@@ -1161,7 +1058,7 @@ const model = {
         },
         {
             id: 63,
-            categoryId: [],
+            categoryId: [1, 5, 7, 8],
             title: "Godzilla Vs. Kong (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/godzilla-vs-kong-2021',
@@ -1177,7 +1074,7 @@ const model = {
         },
         {
             id: 64,
-            categoryId: [],
+            categoryId: [1, 7, 8, 6],
             title: "Those Who Wish Me Dead (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/those-who-wish-me-dead-2021',
@@ -1193,7 +1090,7 @@ const model = {
         },
         {
             id: 65,
-            categoryId: [],
+            categoryId: [8],
             title: "In the Heights (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/in-the-heights-2021',
@@ -1209,7 +1106,7 @@ const model = {
         },
         {
             id: 66,
-            categoryId: [],
+            categoryId: [10],
             title: "Harry Potter 20th Anniversary: Return to Hogwarts",
             Netflix: '',
             viaplay: '',
@@ -1225,7 +1122,7 @@ const model = {
         },
         {
             id: 67,
-            categoryId: [],
+            categoryId: [7, 6],
             title: "The Little Things (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-little-things-2021',
@@ -1241,7 +1138,7 @@ const model = {
         },
         {
             id: 68,
-            categoryId: [],
+            categoryId: [6, 7, 8],
             title: "No Sudden Move (2021)",
             Netflix: '',
             viaplay: '',
@@ -1257,7 +1154,7 @@ const model = {
         },
         {
             id: 69,
-            categoryId: [],
+            categoryId: [1, 9, 5, 7],
             title: "Mortal Kombat (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/mortal-kombat-2021',
@@ -1273,7 +1170,7 @@ const model = {
         },
         {
             id: 70,
-            categoryId: [],
+            categoryId: [3, 8],
             title: "Where Hands Touch (2018)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/where-hands-touch-2018',
@@ -1289,7 +1186,7 @@ const model = {
         },
         {
             id: 71,
-            categoryId: [],
+            categoryId: [8],
             title: "Just Mercy (2019)",
             Netflix: '',
             viaplay: '',
@@ -1305,7 +1202,7 @@ const model = {
         },
         {
             id: 72,
-            categoryId: [],
+            categoryId: [8],
             title: "Sully (2016)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/sully-2016',
@@ -1321,7 +1218,7 @@ const model = {
         },
         {
             id: 73,
-            categoryId: [],
+            categoryId: [3, 8],
             title: "Disobedience (2017)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/disobedience-2017',
@@ -1337,7 +1234,7 @@ const model = {
         },
         {
             id: 74,
-            categoryId: [],
+            categoryId: [7, 6, 8],
             title: "Malignant (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/malignant-2021',
@@ -1353,7 +1250,7 @@ const model = {
         },
         {
             id: 75,
-            categoryId: [],
+            categoryId: [6, 7, 8],
             title: "The Mule (2018)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-mule-2018',
@@ -1369,7 +1266,7 @@ const model = {
         },
         {
             id: 76,
-            categoryId: [],
+            categoryId: [4, 7],
             title: "The Conjuring: the Devil Made Me Do It (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-conjuring-3-the-devil-made-me-do-it-2021',
@@ -1385,7 +1282,7 @@ const model = {
         },
         {
             id: 77,
-            categoryId: [],
+            categoryId: [1, 7, 9, 6, 8],
             title: "The Fugitive (1993)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/jaget-1993',
@@ -1401,7 +1298,7 @@ const model = {
         },
         {
             id: 78,
-            categoryId: [],
+            categoryId: [4, 1, 9, 7, 8],
             title: "Constantine (2005)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/constantine-2005',
@@ -1417,7 +1314,7 @@ const model = {
         },
         {
             id: 79,
-            categoryId: [],
+            categoryId: [2, 6],
             title: "Analyze That (2002)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/analyze-that-2002',
@@ -1433,7 +1330,7 @@ const model = {
         },
         {
             id: 80,
-            categoryId: [],
+            categoryId: [2, 3, 8],
             title: "Crazy, Stupid, Love (2011)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/crazy-stupid-love.-2011',
@@ -1449,7 +1346,7 @@ const model = {
         },
         {
             id: 81,
-            categoryId: [],
+            categoryId: [2, 8, 3],
             title: "2 Days in New York (2012)",
             Netflix: '',
             viaplay: '',
@@ -1465,7 +1362,7 @@ const model = {
         },
         {
             id: 82,
-            categoryId: [],
+            categoryId: [2, 8],
             title: "Dumb and Dumber (1994)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/dum-og-dummere-1994',
@@ -1481,7 +1378,7 @@ const model = {
         },
         {
             id: 83,
-            categoryId: [],
+            categoryId: [2, 7],
             title: "The House (2017)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/the-house-2017',
@@ -1497,7 +1394,7 @@ const model = {
         },
         {
             id: 84,
-            categoryId: [],
+            categoryId: [2, 1, 7, 6],
             title: "Game Night (2018)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/game-night-2018',
@@ -1513,7 +1410,7 @@ const model = {
         },
         {
             id: 85,
-            categoryId: [],
+            categoryId: [1, 2],
             title: "Tag (2018)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/tag-2018',
@@ -1529,7 +1426,7 @@ const model = {
         },
         {
             id: 86,
-            categoryId: [],
+            categoryId: [3, 8],
             title: "Darling (2017)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/darling-2017',
@@ -1545,7 +1442,7 @@ const model = {
         },
         {
             id: 87,
-            categoryId: [],
+            categoryId: [2],
             title: "Daddy's Home (2015)",
             Netflix: '',
             viaplay: 'https://viaplay.no/filmer/daddys-home-2015',
@@ -1561,7 +1458,7 @@ const model = {
         },
         {
             id: 88,
-            categoryId: [],
+            categoryId: [2],
             title: "Daddy's Home 2 (2017)",
             Netflix: '',
             viaplay: '',
@@ -1577,7 +1474,7 @@ const model = {
         },
         {
             id: 89,
-            categoryId: [],
+            categoryId: [1, 9],
             title: "Harry Potter and the Sorcerer's Stone (2001)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/harry-potter-og-de-vises-stein-2001',
@@ -1593,7 +1490,7 @@ const model = {
         },
         {
             id: 90,
-            categoryId: [],
+            categoryId: [1, 9],
             title: "Lord Of The Rings: Fellowship Of The Ring (2001)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/ringenes-herre-ringens-brorskap-2001',
@@ -1609,7 +1506,7 @@ const model = {
         },
         {
             id: 91,
-            categoryId: [],
+            categoryId: [10],
             title: "The Last Truck: Closing Of The GM Plant (2009)",
             Netflix: '',
             viaplay: '',
@@ -1625,7 +1522,7 @@ const model = {
         },
         {
             id: 92,
-            categoryId: [],
+            categoryId: [7, 8],
             title: "438 Days (2019)",
             Netflix: 'https://www.netflix.com/no-en/title/81536930',
             viaplay: 'https://viaplay.no/filmer/438-dager-2019',
@@ -1641,7 +1538,7 @@ const model = {
         },
         {
             id: 93,
-            categoryId: [],
+            categoryId: [7, 8],
             title: "9. april (2015)",
             Netflix: 'https://www.netflix.com/no-en/title/80176708',
             viaplay: 'https://viaplay.no/filmer/9.-april-2015',
@@ -1657,7 +1554,7 @@ const model = {
         },
         {
             id: 94,
-            categoryId: [],
+            categoryId: [7, 8],
             title: "99 Homes (2014)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/99-homes-2014',
@@ -1673,7 +1570,7 @@ const model = {
         },
         {
             id: 95,
-            categoryId: [],
+            categoryId: [3, 8],
             title: "Tyrannosaur (2011)",
             Netflix: '',
             viaplay: '',
@@ -1689,7 +1586,7 @@ const model = {
         },
         {
             id: 96,
-            categoryId: [],
+            categoryId: [1, 2, 9],
             title: "Shazam! (2019)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/shazam-2019',
@@ -1705,7 +1602,7 @@ const model = {
         },
         {
             id: 97,
-            categoryId: [],
+            categoryId: [1, 5, 7],
             title: "Mad Max: Fury Road (2015)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/mad-max-fury-road-2015',
@@ -1721,7 +1618,7 @@ const model = {
         },
         {
             id: 98,
-            categoryId: [],
+            categoryId: [1, 5, 9],
             title: "Zack Snyder's Justice League (2021)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/zack-snyders-justice-league-2021',
@@ -1737,7 +1634,7 @@ const model = {
         },
         {
             id: 99,
-            categoryId: [],
+            categoryId: [1, 5, 7],
             title: "The Hunger Games (2012)",
             Netflix: 'https://www.netflix.com/no-en/title/70206672',
             viaplay: 'https://viaplay.no/filmer/the-hunger-games-2012',
@@ -1753,7 +1650,7 @@ const model = {
         },
         {
             id: 100,
-            categoryId: [],
+            categoryId: [1, 2, 5, 9],
             title: "Spider-Man: Into the Spider-Verse (2018)",
             Netflix: '',
             viaplay: 'https://viaplay.no/store/spider-man-into-the-spider-verse-2018',
@@ -1768,22 +1665,7 @@ const model = {
             picture: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzgVDufQ-YlHRzffc1Ar-5Qwb_lrd6xRgYKTzco4p17awu-qJp",
         },
 
-        {
-            id: 101,
-            categoryId: [],
-            title: "Din gris!",
-            Netflix: '',
-            viaplay: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            youtube: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            googleplay: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            appletv: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            hbo: "https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/",
-            amazon: "",
-            tv2: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            disney: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            discovery: 'https://www.kondomeriet.no/sexleketoy/passer-for/sexleketoy-for-ham/fleshlight-vagina-pink-lady-destroya/',
-            picture: "https://www.kondomeriet.no/globalassets/aa_produktbilder/for-menn/fleshlight/120853-fleshlight-pink-lady-destroya.jpg?height=461&quality=75&format=webp",
-        },
+
 
 
     ],

@@ -19,6 +19,11 @@ function updateView() {
     if (side == "search") search();
     if (side == "skjult") skjult();
     if (side == "startside") startside();
+
+
+    //-----------------------------------------\\
+    //---------------ACTION-SIDER---------------\\
+    //-------------------------------------------\\
     if (side == "action-komedie") actionkomedie();
     if (side == "action-Drama") actiondrama();
     if (side == "action-Fantasy") actionfantasy();
@@ -27,6 +32,72 @@ function updateView() {
     if (side == "action-Scifi") actionscifi();
     if (side == "action-Krim") actionkrim();
     if (side == "action-Thriller") actionthriller();
+
+
+    //------------------------------------------\\
+    //---------------KOMEDIE-SIDER---------------\\
+    //--------------------------------------------\\
+    if (side == "komedie-action") komedieaction();
+    if (side == "komedie-Drama") komediedrama();
+    if (side == "komedie-Fantasy") komediefantasy();
+    if (side == "komedie-Romantikk") komedieromantikk();
+    if (side == "komedie-Skrekk") komedieskrekk();
+    if (side == "komedie-Scifi") komediescifi();
+    if (side == "komedie-Krim") komediekrim();
+    if (side == "komedie-Thriller") komediethriller();
+
+
+    //--------------------------------------------\\
+    //---------------ROMANTIKK-SIDER---------------\\
+    //----------------------------------------------\\
+    if (side == "romantikk-action") romantikkaction();
+    if (side == "romantikk-Drama") romantikkdrama();
+    if (side == "romantikk-Fantasy") romantikkfantasy();
+    if (side == "romantikk-Komedie") romantikkkomedie();
+    if (side == "romantikk-Skrekk") romantikkskrekk();
+    if (side == "romantikk-Scifi") romantikkscifi();
+    if (side == "romantikk-Krim") romantikkkrim();
+    if (side == "romantikk-Thriller") romantikkthriller();
+
+
+    //-----------------------------------------\\
+    //---------------SKREKK-SIDER---------------\\
+    //-------------------------------------------\\
+    if (side == "skrekk-action") skrekkaction();
+    if (side == "skrekk-Drama") skrekkdrama();
+    if (side == "skrekk-Fantasy") skrekkfantasy();
+    if (side == "skrekk-Romantikk") skrekkromantikk();
+    if (side == "skrekk-Komedie") skrekkKomedie();
+    if (side == "skrekk-Scifi") skrekkscifi();
+    if (side == "skrekk-Krim") skrekkkrim();
+    if (side == "skrekk-Thriller") skrekkthriller();
+
+
+    //----------------------------------------\\
+    //---------------SCIFI-SIDER---------------\\
+    //------------------------------------------\\
+    if (side == "scifi-action") scifiaction();
+    if (side == "scifi-Drama") scifidrama();
+    if (side == "scifi-Fantasy") scififantasy();
+    if (side == "scifi-Romantikk") scifiromantikk();
+    if (side == "scifi-Komedie") scifiKomedie();
+    if (side == "scifi-Skrekk") scifiskrekk();
+    if (side == "scifi-Krim") scifikrim();
+    if (side == "scifi-Thriller") scifithriller();
+
+
+    //----------------------------------------\\
+    //---------------KRIM-SIDER---------------\\
+    //------------------------------------------\\
+    if (side == "krim-action") krimaction();
+    if (side == "krim-drama") krimdrama();
+    if (side == "krim-fantasy") krimfantasy();
+    if (side == "krim-romantikk") krimromantikk();
+    if (side == "krim-komedie") krimkomedie();
+    if (side == "krim-skrekk") krimskrekk();
+    if (side == "krim-scifi") krimscifi();
+    if (side == "krim-thriller") krimthriller();
+
 
 }
 
@@ -58,22 +129,19 @@ function showmeny() {
     <Button type="button" class="button" onclick="changePage('movie')">Filmer</button>
     <Button type="button" class="button" onclick="changePage('series')">Serier</button>
     
-    
-   
-    <input id="myInput" class="search-button"
-    placeholder=" Søk "
-    oninput="model.search.text=this.value"
-    value="${model.search.text || ''}"
-
-    />
+    <input id="myInput" class="search-button" placeholder=" Søk " onchange="model.search.text=this.value; changePage('search')"
+        value="${model.search.text || ''}" />
     <button id="myBtn" class="butt" onclick="changePage('search')">&#128269;</button>
-  
+
+
+    
     </center>
     
 </div>
 
     `;
     return html;
+    Covid.innerHTML = html;
 }
 
 // </div>
