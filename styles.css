@@ -18,7 +18,7 @@ body.dark-theme {
 }
 
 .dark-theme {
-  --secondery-color: rgb(34, 26, 26);
+  --secondery-color: rgb(29, 24, 24);
 }
 
 .bilde {
@@ -32,6 +32,7 @@ body.dark-theme {
   max-height: 400px;
   max-width: 400px;
   border: solid #e60106 6px;
+  box-shadow: 4px 4px 3px black;
 }
 
 .catbutt {
@@ -52,12 +53,14 @@ body.dark-theme {
 }
 
 .cell {
+  background-color: rgba(94, 87, 87, 0.274);
   float: left;
   padding-top: 10px;
   margin: 10px;
   width: 300px;
   height: 500px;
   border: solid 5px #e60106;
+  box-shadow: 4px 4px 4px black;
 }
 
 .cell2 {
@@ -78,19 +81,33 @@ body.dark-theme {
   max-width: 200px;
   border-radius: 20px;
   border: solid #e60106 5px;
+  box-shadow: 3px 3px 3px black;
 }
 
 .ramme {
+  background-color: rgba(94, 87, 87, 0.274);
   border: solid #e60106 5px;
   border-radius: 20px;
   display: inline-block;
   text-align: left;
   padding: 22px;
+  box-shadow: 3px 3px 3px black;
+}
+
+h1 {
+  text-shadow: 2px 2px 2px black;
+}
+
+h2 {
+  text-shadow: 1px 1px 2px black;
+}
+
+h3 {
+  text-shadow: 1px 1px 2px black;
 }
 
 html {
   color: #e60106;
-
   font-family: 'Netflix Sans', sans-serif;
 }
 
@@ -169,9 +186,11 @@ html {
 
 
 .btn-group .button {
-
+  margin: 3px;
   background-color: #e60106;
   border: 1px solid #e60106;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
   color: black;
   padding: 5px 10px;
   text-align: center;
@@ -184,6 +203,8 @@ html {
 
 .btn-group .button:hover {
   opacity: 0.7;
+  transform: scale(1.1);
+  transition: 0.5s ease;
   background-color: #e60106;
   border: 1px solid #e60106;
   color: black;
@@ -210,9 +231,10 @@ html {
 
 .search-button {
   width: 15%;
-
   background-color: #e60106;
   border: 1px solid #e60106;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
   color: black(255, 0, 0);
   padding: 5px 10px;
   text-align: left;
@@ -225,23 +247,29 @@ html {
 
 .search-button:hover {
   opacity: 0.4;
+
 }
 
 .butt {
+  margin: 3px;
   line-height: 34px;
   background-color: #e60106;
   border: 1px solid #e60106;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
   color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
   cursor: pointer;
+  transition: 0.5s ease;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .butt:hover {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
 ::placeholder {
@@ -354,13 +382,18 @@ html {
 }
 
 .logg {
+  background-color: hsl(317 100% 54%);
   border: solid hsl(317 100% 54%) 2px;
+  border-radius: 20%;
   box-shadow: 0 0 1em 0.2em var(--clr-neon);
+  font-size: 1.3rem;
 }
 
 .buttis {
   background-color: #e60106;
   border: 1px solid #e60106;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black;
   color: black(255, 0, 0);
   padding: 5px 10px;
   text-align: left;
@@ -369,8 +402,10 @@ html {
   font-size: 15px;
   cursor: pointer;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.5s ease;
 }
 
 .buttis:hover {
   opacity: 0.7;
+  transform: scale(1.1);
 }

@@ -157,15 +157,18 @@ function showUnderThriller() {
     <center>
     <br>
     <h1> Underkategorier </h1>
-    </center>
-`;
-    for (let i = 0; i < model.undercategories7.length; i++) {
-        let first = i % 2 == 0 ? 'first' : '';
-        html += `
-        <div class="cell2${first} "></div>
-        <button class="catbutt" onclick="categories()">${model.undercategories7[i].underCategory}</button>
-        `;
-    };
+    <Button type="button" class="buttis" onclick="changePage('Kategorier')">&#11013; Tilbake</button><br><br>
+    <Button class="catbutt"" onclick="changePage('thriller-action')">Thriller-Action</button>
+    <Button class="catbutt"" onclick="changePage('thriller-drama')">Thriller-Drama</button>
+    <Button class="catbutt"" onclick="changePage('thriller-fantasy')">Thriller-Fantasy</button>
+    <br>
+    <Button class="catbutt"" onclick="changePage('thriller-romantikk')">Thriller-Romantikk</button>
+    <Button class="catbutt"" onclick="changePage('thriller-komedie')">Thriller-Komedie</button>
+    <Button class="catbutt"" onclick="changePage('thriller-skrekk')">Thriller-Skrekk</button>
+    <br>
+    <Button class="catbutt"" onclick="changePage('thriller-scifi')">Thriller-Scifi</button>
+    <Button class="catbutt"" onclick="changePage('thriller-krim')">Thriller-Krim</button>
+    </center>`;
 
     Covid.innerHTML = html;
 }
@@ -176,15 +179,18 @@ function showUnderDrama() {
     <center>
     <br>
     <h1> Underkategorier </h1>
-    </center>
-`;
-    for (let i = 0; i < model.undercategories8.length; i++) {
-        let first = i % 2 == 0 ? 'first' : '';
-        html += `
-        <div class="cell2${first} "></div>
-        <button class="catbutt" onclick="categories()">${model.undercategories8[i].underCategory}</button>
-        `;
-    };
+    <Button type="button" class="buttis" onclick="changePage('Kategorier')">&#11013; Tilbake</button><br><br>
+    <Button class="catbutt"" onclick="changePage('drama-action')">Drama-Action</button>
+    <Button class="catbutt"" onclick="changePage('drama-thriller')">Drama-Thriller</button>
+    <Button class="catbutt"" onclick="changePage('drama-fantasy')">Drama-Fantasy</button>
+    <br>
+    <Button class="catbutt"" onclick="changePage('drama-romantikk')">Drama-Romantikk</button>
+    <Button class="catbutt"" onclick="changePage('drama-komedie')">Drama-Komedie</button>
+    <Button class="catbutt"" onclick="changePage('drama-skrekk')">Drama-Skrekk</button>
+    <br>
+    <Button class="catbutt"" onclick="changePage('drama-scifi')">Drama-Scifi</button>
+    <Button class="catbutt"" onclick="changePage('drama-krim')">Drama-Krim</button>
+    </center>`;
 
     Covid.innerHTML = html;
 }
@@ -195,34 +201,18 @@ function showUnderFantasy() {
     <center>
     <br>
     <h1> Underkategorier </h1>
-    </center>
-`;
-    for (let i = 0; i < model.undercategories9.length; i++) {
-        let first = i % 2 == 0 ? 'first' : '';
-        html += `
-        <div class="cell2${first} "></div>
-        <button class="catbutt" onclick="categories()">${model.undercategories9[i].underCategory}</button>
-        `;
-    };
-
-    Covid.innerHTML = html;
-}
-
-function showUnderDokumentar() {
-    let html = `
-    ${showmeny()}
-    <center>
+    <Button type="button" class="buttis" onclick="changePage('Kategorier')">&#11013; Tilbake</button><br><br>
+    <Button class="catbutt"" onclick="changePage('fantasy-action')">Fantasy-Action</button>
+    <Button class="catbutt"" onclick="changePage('fantasy-thriller')">Fantasy-Thriller</button>
+    <Button class="catbutt"" onclick="changePage('fantasy-drama')">Fantasy-Drama</button>
     <br>
-    <h1> Underkategorier </h1>
-    </center>
-`;
-    for (let i = 0; i < model.undercategories10.length; i++) {
-        let first = i % 2 == 0 ? 'first' : '';
-        html += `
-        <div class="cell2${first} "></div>
-        <button class="catbutt" onclick="categories()">${model.undercategories10[i].underCategory}</button>
-        `;
-    };
+    <Button class="catbutt"" onclick="changePage('fantasy-romantikk')">Fantasy-Romantikk</button>
+    <Button class="catbutt"" onclick="changePage('fantasy-komedie')">Fantasy-Komedie</button>
+    <Button class="catbutt"" onclick="changePage('fantasy-skrekk')">Fantasy-Skrekk</button>
+    <br>
+    <Button class="catbutt"" onclick="changePage('fantasy-scifi')">Fantasy-Scifi</button>
+    <Button class="catbutt"" onclick="changePage('fantasy-krim')">Fantasy-Krim</button>
+    </center>`;
 
     Covid.innerHTML = html;
 }

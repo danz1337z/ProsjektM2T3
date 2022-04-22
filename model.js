@@ -12,11 +12,17 @@ const model = {
         favPics: [],
         netflixLinker: [],
         hboLinker: [],
+        youtubeLinker: [],
+        googleLinker: [],
+        appletvLinker: [],
+        amazonLinker: [],
+        tv2Linker: [],
+        disneyLinker: [],
+        discoveryLinker: [],
         viaplayLinker: [],
         antallHidet: 0,
         hide: [],
         hidePics: [],
-
     },
     // inputs til hver side
     inputs: {

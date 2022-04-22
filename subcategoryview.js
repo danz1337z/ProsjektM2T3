@@ -2109,17 +2109,13 @@ function krimthriller() {
     Covid.innerHTML = html;
 }
 
-//--------------------------------------------------------------------------------------------\\
-//----------------------------------------DU STOPPA HER----------------------------------------\\
-//----------------------------------------------------------------------------------------------\\
+//--------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-ACTION----------------------------------------\\
+//----------------------------------------------------------------------------------------------------------------\\
 
-//---------------------------------------------------------------------------------------------------------\\
-//----------------------------------------Underkategorier SCIFI-DRAMA---------------------------------------\\
-//-----------------------------------------------------------------------------------------------------------\\
+function thrilleraction() {
 
-function scifidrama() {
-
-    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(5) && movie.categoryId.includes(8)));
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(1)));
 
     let movieHtml = "";
     actionComedyMovies.forEach(movie =>
@@ -2148,12 +2144,1072 @@ function scifidrama() {
     ${showmeny()}
     <center>
     <br><br>
-    <Button type="button" class="buttis" onclick="showUnderScifi()">&#11013;Tilbake</button>
-    <h2>Scifi Drama</h2>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Action</h2>
     <h4>${movieHtml}</h4>
     
     </center>
     `;
     Covid.innerHTML = html;
 }
+
+//-------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-DRAMA----------------------------------------\\
+//---------------------------------------------------------------------------------------------------------------\\
+
+function thrillerdrama() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(8)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Drama</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//---------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-FANTASY----------------------------------------\\
+//-----------------------------------------------------------------------------------------------------------------\\
+
+function thrillerfantasy() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(9)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Fantasy</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-----------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-ROMANTIKK----------------------------------------\\
+//-------------------------------------------------------------------------------------------------------------------\\
+
+function thrillerromantikk() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(3)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Romantikk</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//---------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-KOMEDIE----------------------------------------\\
+//-----------------------------------------------------------------------------------------------------------------\\
+
+function thrillerkomedie() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(2)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Komedie</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//--------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-SKREKK----------------------------------------\\
+//----------------------------------------------------------------------------------------------------------------\\
+
+function thrillerskrekk() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(4)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Skrekk</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-SCIFI----------------------------------------\\
+//---------------------------------------------------------------------------------------------------------------\\
+
+function thrillerscifi() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(5)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Scifi</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier THRILLER-KRIM----------------------------------------\\
+//--------------------------------------------------------------------------------------------------------------\\
+
+function thrillerkrim() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(7) && movie.categoryId.includes(6)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderThriller()">&#11013;Tilbake</button>
+    <h2>Thriller Krim</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-----------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-ACTION----------------------------------------\\
+//-------------------------------------------------------------------------------------------------------------\\
+
+function dramaaction() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(1)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Action</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-THRILLER----------------------------------------\\
+//---------------------------------------------------------------------------------------------------------------\\
+
+function dramathriller() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(7)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Thriller</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-FANTASY----------------------------------------\\
+//--------------------------------------------------------------------------------------------------------------\\
+
+function dramafantasy() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(9)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Fantasy</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//--------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-ROMANTIKK----------------------------------------\\
+//----------------------------------------------------------------------------------------------------------------\\
+
+function dramaromantikk() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(3)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Romantikk</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-KOMEDIE----------------------------------------\\
+//--------------------------------------------------------------------------------------------------------------\\
+
+function dramakomedie() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(2)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Komedie</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-----------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-SKREKK----------------------------------------\\
+//-------------------------------------------------------------------------------------------------------------\\
+
+function dramaskrekk() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(4)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Skrekk</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//----------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-SCIFI----------------------------------------\\
+//------------------------------------------------------------------------------------------------------------\\
+
+function dramascifi() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(5)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Scifi</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//---------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DRAMA-KRIM----------------------------------------\\
+//-----------------------------------------------------------------------------------------------------------\\
+
+function dramakrim() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(8) && movie.categoryId.includes(6)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderDrama()">&#11013;Tilbake</button>
+    <h2>Drama Krim</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-ACTION----------------------------------------\\
+//---------------------------------------------------------------------------------------------------------------\\
+
+function fantasyaction() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(1)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Action</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//---------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-THRILLER----------------------------------------\\
+//-----------------------------------------------------------------------------------------------------------------\\
+
+function fantasythriller() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(7)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Thriller</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-DRAMA----------------------------------------\\
+//--------------------------------------------------------------------------------------------------------------\\
+
+function fantasydrama() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(8)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Drama</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//----------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-ROMANTIKK----------------------------------------\\
+//------------------------------------------------------------------------------------------------------------------\\
+
+function fantasyromantikk() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(3)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Romantikk</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//--------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-KOMEDIE----------------------------------------\\
+//----------------------------------------------------------------------------------------------------------------\\
+
+function fantasykomedie() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(2)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Komedie</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-SKREKK----------------------------------------\\
+//---------------------------------------------------------------------------------------------------------------\\
+
+function fantasyskrekk() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(4)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Skrekk</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//------------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-SCIFI----------------------------------------\\
+//--------------------------------------------------------------------------------------------------------------\\
+
+function fantasyscifi() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(5)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Scifi</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//-----------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier FANTASY-KRIM----------------------------------------\\
+//-------------------------------------------------------------------------------------------------------------\\
+
+function fantasykrim() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(9) && movie.categoryId.includes(6)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Fantasy Krim</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+//---------------------------------------------------------------------------------------------------------\\
+//----------------------------------------Underkategorier DOCUMENTAR----------------------------------------\\
+//-----------------------------------------------------------------------------------------------------------\\
+
+function showUnderDokumentar() {
+
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(10) && movie.categoryId.includes(10)));
+
+    let movieHtml = "";
+    actionComedyMovies.forEach(movie =>
+        movieHtml += `<div class="cell">
+        <center>
+        <img class="bilde" src="${movie.picture}"><br>
+        <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addFavoritt(${movie.id - 1})">
+        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
+        <br>
+        <b>Tittel: ${movie.title}</b><br>
+        ${Netflix = movie.Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${movie.Netflix}');">` : ''}
+        ${hbo = movie.hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${movie.hbo}');">` : ''}
+        ${viaplay = movie.viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${movie.viaplay}');">` : ''}
+        ${youtube = movie.youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${movie.youtube}');">` : ''}
+        ${googleplay = movie.googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${movie.googleplay}');">` : ''}
+        ${appleTV = movie.appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${movie.appletv}');">` : ''}
+        ${amazon = movie.amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${movie.amazon}');">` : ''}
+        ${tv2 = movie.tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${movie.tv2}');">` : ''}
+        ${disney = movie.disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${movie.disney}');">` : ''}
+        ${discovery = movie.discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${movie.discovery}');">` : ''}
+        </center>
+        </div>`
+    );
+
+    html = `
+    ${showmeny()}
+    <center>
+    <br><br>
+    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <h2>Dokumentar</h2>
+    <h4>${movieHtml}</h4>
+    
+    </center>
+    `;
+    Covid.innerHTML = html;
+}
+
+
+
+
 

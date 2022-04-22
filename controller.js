@@ -2,7 +2,6 @@ function icon() {
     document.body.classList.toggle("dark-theme")
 }
 
-
 //Funksjon som legger til favoritt serie
 function addSerie(index) {
     model.app.antallFavoritter++;
@@ -10,9 +9,17 @@ function addSerie(index) {
     model.app.favPics.push(model.series[index].picture);
     model.app.netflixLinker.push(model.series[index].Netflix);
     model.app.hboLinker.push(model.series[index].hbo);
-    model.app.viaplayLinker.push(model.series[index].Viaplay);
+    model.app.viaplayLinker.push(model.series[index].viaplay);
+    model.app.youtubeLinker.push(model.series[index].youtube);
+    model.app.googleLinker.push(model.series[index].googleplay);
+    model.app.appletvLinker.push(model.series[index].appletv);
+    model.app.amazonLinker.push(model.series[index].amazon);
+    model.app.tv2Linker.push(model.series[index].tv2);
+    model.app.disneyLinker.push(model.series[index].disney);
+    model.app.discoveryLinker.push(model.series[index].discovery);
     series();
 }
+
 //Funksjon som legger til favoritt film
 function addFavoritt(index) {
     model.app.antallFavoritter++;
@@ -20,7 +27,14 @@ function addFavoritt(index) {
     model.app.favPics.push(model.movies[index].picture);
     model.app.netflixLinker.push(model.movies[index].Netflix);
     model.app.hboLinker.push(model.movies[index].hbo);
-    model.app.viaplayLinker.push(model.movies[index].Viaplay);
+    model.app.viaplayLinker.push(model.movies[index].viaplay);
+    model.app.youtubeLinker.push(model.movies[index].youtube);
+    model.app.googleLinker.push(model.movies[index].googleplay);
+    model.app.appletvLinker.push(model.movies[index].appletv);
+    model.app.amazonLinker.push(model.movies[index].amazon);
+    model.app.tv2Linker.push(model.movies[index].tv2);
+    model.app.disneyLinker.push(model.movies[index].disney);
+    model.app.discoveryLinker.push(model.movies[index].discovery);
     movie();
 }
 //Funksjon som legger til favoritt random
@@ -31,7 +45,14 @@ function addTilfeldig(index) {
     model.app.favPics.push(model.movies[index].picture);
     model.app.netflixLinker.push(model.movies[index].Netflix);
     model.app.hboLinker.push(model.movies[index].hbo);
-    model.app.viaplayLinker.push(model.movies[index].Viaplay);
+    model.app.viaplayLinker.push(model.movies[index].viaplay);
+    model.app.youtubeLinker.push(model.movies[index].youtube);
+    model.app.googleLinker.push(model.movies[index].googleplay);
+    model.app.appletvLinker.push(model.movies[index].appletv);
+    model.app.amazonLinker.push(model.movies[index].amazon);
+    model.app.tv2Linker.push(model.movies[index].tv2);
+    model.app.disneyLinker.push(model.movies[index].disney);
+    model.app.discoveryLinker.push(model.movies[index].discovery);
     alert("Adda til fav xoxo")
 }
 //Funksjon som skjuler film

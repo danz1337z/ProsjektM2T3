@@ -8,6 +8,7 @@ function changePage(side) {
 updateView();
 
 function updateView() {
+
     const side = model.app.currentpage;
     if (side == "Film Velger") login();
     if (side == "Kategorier") categories();
@@ -86,9 +87,9 @@ function updateView() {
     if (side == "scifi-Thriller") scifithriller();
 
 
-    //----------------------------------------\\
+    //---------------------------------------\\
     //---------------KRIM-SIDER---------------\\
-    //------------------------------------------\\
+    //-----------------------------------------\\
     if (side == "krim-action") krimaction();
     if (side == "krim-drama") krimdrama();
     if (side == "krim-fantasy") krimfantasy();
@@ -99,12 +100,51 @@ function updateView() {
     if (side == "krim-thriller") krimthriller();
 
 
+    //-------------------------------------------\\
+    //---------------THRILLER-SIDER---------------\\
+    //---------------------------------------------\\
+    if (side == "thriller-action") thrilleraction();
+    if (side == "thriller-drama") thrillerdrama();
+    if (side == "thriller-fantasy") thrillerfantasy();
+    if (side == "thriller-romantikk") thrillerromantikk();
+    if (side == "thriller-komedie") thrillerkomedie();
+    if (side == "thriller-skrekk") thrillerskrekk();
+    if (side == "thriller-scifi") thrillerscifi();
+    if (side == "thriller-krim") thrillerkrim();
+
+
+    //----------------------------------------\\
+    //---------------DRAMA-SIDER---------------\\
+    //------------------------------------------\\
+    if (side == "drama-action") dramaaction();
+    if (side == "drama-thriller") dramathriller();
+    if (side == "drama-fantasy") dramafantasy();
+    if (side == "drama-romantikk") dramaromantikk();
+    if (side == "drama-komedie") dramakomedie();
+    if (side == "drama-skrekk") dramaskrekk();
+    if (side == "drama-scifi") dramascifi();
+    if (side == "drama-krim") dramakrim();
+
+
+    //----------------------------------------\\
+    //---------------FANTASY-SIDER---------------\\
+    //------------------------------------------\\
+    if (side == "fantasy-action") fantasyaction();
+    if (side == "fantasy-thriller") fantasythriller();
+    if (side == "fantasy-drama") fantasydrama();
+    if (side == "fantasy-romantikk") fantasyromantikk();
+    if (side == "fantasy-komedie") fantasykomedie();
+    if (side == "fantasy-skrekk") fantasyskrekk();
+    if (side == "fantasy-scifi") fantasyscifi();
+    if (side == "fantasy-krim") fantasykrim();
+
+
 }
 
 function login() {
     let html = `
     <br>
-    <button  class="logg" onclick="icon()"><box-icon type='solid' name='moon'></box-icon></button>
+    <button  class="logg" onclick="icon()"></box-icon>🌓</button>
         <Center>
         <h1>${model.inputs.startpage.login}</h1>
         <input type = "text" onchange="model.inputs.startpage.login = this.value" placeholder ="User Name">
@@ -118,12 +158,13 @@ function login() {
 }
 
 function showmeny() {
+
     let html = /*html*/`
    
     <div class="btn-group">
    
     <center>
-    <button  class="butt" onclick="icon()"><box-icon type='solid' name='moon'></box-icon></button>
+    <button  class="butt" onclick="icon()"></box-icon>🌓</button>
     <Button type="button" class="button" onclick="changePage('Min Side')">Min Side</button>
     <Button type="button" class="button" onclick="changePage('Kategorier')">Kategorier</button>
     <Button type="button" class="button" onclick="changePage('movie')">Filmer</button>
@@ -157,6 +198,7 @@ function loggpå() {
     Covid.innerHTML = html;
 }
 
+
 function favs() {
     let html = `
     ${showmeny()}
@@ -167,12 +209,19 @@ function favs() {
         <img class="bilde" src="${model.app.favPics[i]}" alt="bilde"><br><br>
         ${model.app.favOs[i]}
         <br>
-        <div class="btn">
-        <Button onclick="openInNewTab('${model.app.netflixLinker[i]}');"> Se den på Netflix</Button>
-        <Button onclick="openInNewTab('${model.app.hboLinker[i]}');"> Se den på Hbo</Button>
-        <Button onclick="openInNewTab('${model.app.viaplayLinker[i]}');"> Se den på Viaplay</Button>
+        <div class="btn-group">
+       
+        ${Netflix = model.app.netflixLinker[i] != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.app.netflixLinker[i]}');">` : ''}
+        ${hbo = model.app.hboLinker[i] != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.app.hboLinker[i]}');">` : ''}
+        ${viaplay = model.app.viaplayLinker[i] != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.app.viaplayLinker[i]}');">` : ''}
+        ${youtube = model.app.youtubeLinker[i] != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.app.youtubeLinker[i]}');">` : ''}
+        ${googleplay = model.app.googleLinker[i] != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.app.googleLinker[i]}');">` : ''}
+        ${appleTV = model.app.appletvLinker[i] != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.app.appletvLinker[i]}');">` : ''}
+        ${amazon = model.app.amazonLinker[i] != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.app.amazonLinker[i]}');">` : ''}
+        ${tv2 = model.app.tv2Linker[i] != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.app.tv2Linker[i]}');">` : ''}
+        ${disney = model.app.disneyLinker[i] != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.app.disneyLinker[i]}');">` : ''}
         <br><br>
-        <button onclick="slett(${i})">Slett</button>
+        <button class="buttis" onclick="slett(${i})">Slett</button>
         <hr>
         </div>
         `};
@@ -217,7 +266,7 @@ function skjult() {
         html += `
          <b>
         ${model.app.hide[i]}
-        <button onclick="gjennopprett(${i})">Gjennopporett</button>
+        <button class="buttis" onclick="gjennopprett(${i})">Gjennopporett</button>
         </b>
         <hr>
         `};
