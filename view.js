@@ -3,6 +3,7 @@ let Covid = document.getElementById('app');
 
 function changePage(side) {
     model.app.currentpage = side;
+    model.testtest = "";
     updateView();
 }
 updateView();
@@ -142,16 +143,16 @@ function updateView() {
 }
 
 function login() {
+    //<button  class="logg" onclick="icon()"></box-icon>🌓</button>
     let html = `
     <br>
-    <button  class="logg" onclick="icon()"></box-icon>🌓</button>
-        <Center>
-        <h1>${model.inputs.startpage.login}</h1>
-        <input type = "text" onchange="model.inputs.startpage.login = this.value" placeholder ="User Name">
-        <br><br>
-        <input type = "password" onchange="model.inputs.startpage.pwd = this.value" placeholder ="Password">
-        <br><br>
-        <a href="#" class="neon-btn" onclick ="startside()">Login</a>
+    <Center>
+    <h1>${model.app.currentpage}</h1>
+    <input type = "text" onchange="model.inputs.startpage.login = this.value" placeholder ="User Name">
+    <br><br>
+    <input type = "password" onchange="model.inputs.startpage.pwd = this.value" placeholder ="Password">
+    <br><br>
+    <a href="#" class="neon-btn" onclick ="loggpå()">Login</a><br>
         </Center>
     `;
     Covid.innerHTML = html;
@@ -164,14 +165,14 @@ function showmeny() {
     <div class="btn-group">
    
     <center>
-    <button  class="butt" onclick="icon()"></box-icon>🌓</button>
+    <button  class="butt" title="Dark Mode" onclick="icon()"></box-icon>🌓</button>
     <Button type="button" class="button" onclick="changePage('Min Side')">Min Side</button>
     <Button type="button" class="button" onclick="changePage('Kategorier')">Kategorier</button>
     <Button type="button" class="button" onclick="changePage('movie')">Filmer</button>
     <Button type="button" class="button" onclick="changePage('series')">Serier</button>
     
-    <input id="myInput" class="search-button" placeholder=" Søk " onchange="model.search.text=this.value; changePage('search')"
-        value="${model.search.text || ''}" />
+    <input id="myInput" class="search-button" placeholder=" Søk... " onchange="model.search.text=this.value; changePage('search')"
+        value="${model.testtest || ''}" />
     <button id="myBtn" class="butt" onclick="changePage('search')">&#128269;</button>
 
 
@@ -202,10 +203,13 @@ function loggpå() {
 function favs() {
     let html = `
     ${showmeny()}
+    <div class="flyttFavo">
     <h1> Dine favoritter </h1>
+    </div>
      `;
     for (let i = 0; i < model.app.favOs.length; i++) {
         html += `
+        <div class="flyttFavo">
         <img class="bilde" src="${model.app.favPics[i]}" alt="bilde"><br><br>
         ${model.app.favOs[i]}
         <br>
@@ -223,6 +227,7 @@ function favs() {
         <br><br>
         <button class="buttis" onclick="slett(${i})">Slett</button>
         <hr>
+        </div>
         </div>
         `};
     Covid.innerHTML = html;
@@ -260,15 +265,18 @@ function showUnder() {
 function skjult() {
     let html = `
     ${showmeny()}
+    <div class="flyttFavo">
     <h1> Skjult innhold </h1>
+    </div>
      `;
     for (let i = 0; i < model.app.hide.length; i++) {
         html += `
+        <div class="flyttFavo">
          <b>
-        ${model.app.hide[i]}
-        <button class="buttis" onclick="gjennopprett(${i})">Gjennopporett</button>
+        ${model.app.hide[i].title}
         </b>
         <hr>
+        </div>
         `};
     Covid.innerHTML = html;
 }

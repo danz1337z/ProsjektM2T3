@@ -840,7 +840,7 @@ function romantikkfantasy() {
 
 function romantikkkomedie() {
 
-    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(3) && movie.categoryId.includes(9)));
+    const actionComedyMovies = model.movies.filter(movie => (movie.categoryId.includes(3) && movie.categoryId.includes(2)));
 
     let movieHtml = "";
     actionComedyMovies.forEach(movie =>
@@ -3200,7 +3200,7 @@ function showUnderDokumentar() {
     ${showmeny()}
     <center>
     <br><br>
-    <Button type="button" class="buttis" onclick="showUnderFantasy()">&#11013;Tilbake</button>
+    <Button type="button" class="buttis" onclick="categories()">&#11013;Tilbake</button>
     <h2>Dokumentar</h2>
     <h4>${movieHtml}</h4>
     

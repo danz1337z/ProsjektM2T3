@@ -1,12 +1,11 @@
 
 const model = {
     // tilstand app
-
+    testtest: "",
     app: {
         innhold: '',
         currentpage: "Film Velger",
-        currentuser: "Benjamin",
-        currentepost: "epost@.no",
+        currentuser: "",
         antallFavoritter: 0,
         favOs: [],
         favPics: [],
@@ -34,6 +33,7 @@ const model = {
         startpage: {
             login: "",
             pwd: "",
+            profilbilde: "",
         },
         inputDropdown: "Action",
 
@@ -46,6 +46,10 @@ const model = {
 
     users: [
         { id: 1, name: "Benjamin", pwd: "Yo123", },
+        { id: 2, name: "Thomas", pwd: "Bro321", },
+        { id: 3, name: "Frank", pwd: "Covid", profilbilde: "https://i.pinimg.com/originals/02/5b/aa/025baa5b2cd7e46b6b4730247f6663ed.png", },
+        { id: 4, name: "Daniel", pwd: "1337pswrd", },
+        { id: 5, name: "", pwd: "", },
     ],
 
     categories: [

@@ -4,6 +4,7 @@ function icon() {
 
 //Funksjon som legger til favoritt serie
 function addSerie(index) {
+    if (model.app.favOs.includes(model.series[index].title) == true) return
     model.app.antallFavoritter++;
     model.app.favOs.push(model.series[index].title);
     model.app.favPics.push(model.series[index].picture);
@@ -17,11 +18,13 @@ function addSerie(index) {
     model.app.tv2Linker.push(model.series[index].tv2);
     model.app.disneyLinker.push(model.series[index].disney);
     model.app.discoveryLinker.push(model.series[index].discovery);
+    alert("Adda til fav xoxo")
     series();
 }
 
 //Funksjon som legger til favoritt film
 function addFavoritt(index) {
+    if (model.app.favOs.includes(model.movies[index].title) == true) return
     model.app.antallFavoritter++;
     model.app.favOs.push(model.movies[index].title);
     model.app.favPics.push(model.movies[index].picture);
@@ -35,6 +38,7 @@ function addFavoritt(index) {
     model.app.tv2Linker.push(model.movies[index].tv2);
     model.app.disneyLinker.push(model.movies[index].disney);
     model.app.discoveryLinker.push(model.movies[index].discovery);
+    alert("Adda til fav xoxo")
     movie();
 }
 //Funksjon som legger til favoritt random
@@ -58,23 +62,23 @@ function addTilfeldig(index) {
 //Funksjon som skjuler film
 function hideMovie(index) {
     model.app.antallHidet++;
-    model.app.hide.push(model.movies[index].title);
-    model.app.hidePics.push(model.movies[index].picture);
+    model.app.hide.push(model.movies[index]);
     model.movies.splice(index, 1);
+    alert("Du hida filmen bro!")
     movie();
 }
 //Funksjon som skjuler serie
 function hideSerie(index) {
     model.app.antallHidet++;
-    model.app.hide.push(model.series[index].title);
-    model.app.favPics.push(model.series[index].picture);
+    model.app.hide.push(model.series[index]);
     model.series.splice(index, 1);
+    alert("Du hida serien bro!")
     series();
 }
 //Funksjon som skjuler random
 function hideRandom(index) {
     model.app.antallHidet++;
-    model.app.hide.push(model.movies[index].title);
+    model.app.hide.push(model.movies[index]);
     random();
 }
 //Funksjon som fjerner favoritter
@@ -91,6 +95,10 @@ function slett(index) {
 //Funksjon som gjennoppretter skjult innhold
 function gjennopprett(index) {
     model.app.antallHidet--;
+    if (model.app.hide[index].movieOrSerie == "movie")
+        model.movies.push(model.app.hide[index])
+    if (model.app.hide[index].movieOrSerie == "serie")
+        model.series.push(model.app.hide[index])
     model.app.hide.splice(index, 1);
     skjult();
 
@@ -98,9 +106,30 @@ function gjennopprett(index) {
 // Div funksjoner
 function loggpå() {
     if (model.inputs.startpage.login == model.users[0].name && model.inputs.startpage.pwd == model.users[0].pwd) {
-        changePage("random")
-
-    } else {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[1].name && model.inputs.startpage.pwd == model.users[1].pwd)) {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[2].name && model.inputs.startpage.pwd == model.users[2].pwd)) {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[3].name && model.inputs.startpage.pwd == model.users[3].pwd)) {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[4].name && model.inputs.startpage.pwd == model.users[4].pwd)) {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[5].name && model.inputs.startpage.pwd == model.users[5].pwd)) {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[6].name && model.inputs.startpage.pwd == model.users[6].pwd)) {
+        changePage("startside")
+    }
+    if ((model.inputs.startpage.login == model.users[7].name && model.inputs.startpage.pwd == model.users[7].pwd)) {
+        changePage("startside")
+    }
+    else {
         alert("Feil Passord eller Brukernavn")
 
     }
@@ -109,7 +138,7 @@ function loggpå() {
 
 //Show / Hide Pwd på minside
 function myFunction() {
-    var x = document.getElementById("myInput");
+    var x = document.getElementById("showpw");
     if (x.type === "password") {
         x.type = "text";
     } else {
@@ -153,8 +182,6 @@ function spin() {
     <h2>${model.movies[random].title}</h2>
     <img class="bilde2" src="${model.movies[random].picture}"</img>
     <br>
-    <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addTilfeldig(${model.movies[random].id - 1})">
-    <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${movie.id - 1})">
     <br>
     ${Netflix = model.movies[random].Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.movies[random].Netflix}');">` : ''}
     ${hbo = model.movies[random].hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.movies[random].hbo}');">` : ''}
@@ -175,7 +202,9 @@ function spin() {
     html = `
     ${showmeny()}
     <center>
+    <br>
     <h3> Trykk på hjulet for å finne en tilfeldig film</h3>
+    <br>
     <img src="spinning-shit.png" class="spinner" onclick = "spin()">
     <br><br>
     </center>
@@ -197,8 +226,6 @@ function spin2() {
     <h2>${model.series[random].title}</h2>
     <img class="bilde2" src="${model.series[random].picture}"</img>
     <br>
-    <img src="https://www.downloadclipart.net/large/5630-rainbow-heart-design.png" class="favoritt" onclick="addTilfeldig(${model.series[random].id - 1})">
-    <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${model.series[random].id - 1})">
     <br>
     ${Netflix = model.series[random].Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.series[random].Netflix}');">` : ''}
     ${hbo = model.series[random].hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.series[random].hbo}');">` : ''}
@@ -219,7 +246,9 @@ function spin2() {
     html = `
     ${showmeny()}
     <center>
+    <br>
     <h3> Trykk på hjulet for å finne en tilfeldig serie</h3>
+    <br>
     <img src="spinning-shit.png" class="spinner" onclick = "spin2()">
     <br><br>
     </center>

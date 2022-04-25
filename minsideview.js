@@ -4,7 +4,7 @@ function minside() {
     ${showmeny()}
     <center>
     <h1> ${model.app.currentpage} </h1>
-    <img class="profilbilde" src="https://cdn.discordapp.com/attachments/956493727042514984/963050366549782538/unknown.png"></img>
+    <img class="profilbilde" src="https://i.pinimg.com/originals/02/5b/aa/025baa5b2cd7e46b6b4730247f6663ed.png"></img>
     <br>
     <br>
     <div class="btn-group">
@@ -14,20 +14,16 @@ function minside() {
     <br>
     <br>
     <div class="ramme">
-    <h2> Navn: ${model.inputs.startpage.login}</h2>
-    <h2> Epost: ${model.app.currentepost}</h2>  
-    <h2></hh2>Password: <input type="password" value="${model.inputs.startpage.pwd}" id="myInput"></h2>
-    <h4><input type="checkbox" onclick="myFunction()">Show Password</h4>
-    <br>
-    <br>
+    <h2> Brukernavn: ${model.inputs.startpage.login}</h2>
+    <h2> Passord: <input type="password" value="${model.inputs.startpage.pwd}" id="showpw"></h2>
+    <h4><input type="checkbox" onclick="myFunction()">Vis passord</h4>
     <br>
     <center>
     <input id="inpKey" oninput="add = this.value">
     </center>
-    <br>
+    <br><br>
     <div class="btn-group">
-    <button  type="button" class="button" onclick = "endre()">Endre navn</button>
-    <button  type="button" class="button" onclick = "endre1()">Endre e-post</button>
+    <button  type="button" class="button" onclick = "endre()">Endre brukernavn</button>
     <button  type="button" class="button" onclick = "endre2()">Endre passord</button>
     </div>
     </div>
@@ -51,3 +47,6 @@ function endre2() {
     model.inputs.startpage.pwd = add;
     updateView();
 }
+
+
+//<Button type="button" class="button" onclick="changePage('skjult')">Skjult innhold(${model.app.antallHidet})</button>
