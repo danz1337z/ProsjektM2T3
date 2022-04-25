@@ -5,7 +5,7 @@ function startside() {
     <br><br>
     <center>
     <h1> Velkommen ${model.inputs.startpage.login}</h1>
-    <img src="/logos/Cinema-PNG-Photo.png" class="cinema">
+    <img src="/ProsjektM2T3/logos/Cinema-PNG-Photo.png" class="cinema">
     <br><br>
     </center>
     `;
