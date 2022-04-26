@@ -61,16 +61,16 @@ function prinMovies() {
        <img src="https://vignette4.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859" class="fjern" onclick="hideMovie(${i})">
        <br>
        <b>${model.movies[i].title}</b><br>
-       ${Netflix = model.movies[i].Netflix != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.movies[i].Netflix}');">` : ''}
-       ${hbo = model.movies[i].hbo != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.movies[i].hbo}');">` : ''}
-       ${viaplay = model.movies[i].viaplay != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.movies[i].viaplay}');">` : ''}
-       ${youtube = model.movies[i].youtube != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.movies[i].youtube}');">` : ''}
-       ${googleplay = model.movies[i].googleplay != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.movies[i].googleplay}');">` : ''}
-       ${appleTV = model.movies[i].appletv != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.movies[i].appletv}');">` : ''}
-       ${amazon = model.movies[i].amazon != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.movies[i].amazon}');">` : ''}
-       ${tv2 = model.movies[i].tv2 != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.movies[i].tv2}');">` : ''}
-       ${disney = model.movies[i].disney != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.movies[i].disney}');">` : ''}
-       ${discovery = model.movies[i].discovery != '' ? `<input class="btn" type="image" src="/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${model.movies[i].discovery}');">` : ''}
+       ${Netflix = model.movies[i].Netflix != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.movies[i].Netflix}');">` : ''}
+       ${hbo = model.movies[i].hbo != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.movies[i].hbo}');">` : ''}
+       ${viaplay = model.movies[i].viaplay != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.movies[i].viaplay}');">` : ''}
+       ${youtube = model.movies[i].youtube != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.movies[i].youtube}');">` : ''}
+       ${googleplay = model.movies[i].googleplay != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.movies[i].googleplay}');">` : ''}
+       ${appleTV = model.movies[i].appletv != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.movies[i].appletv}');">` : ''}
+       ${amazon = model.movies[i].amazon != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.movies[i].amazon}');">` : ''}
+       ${tv2 = model.movies[i].tv2 != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.movies[i].tv2}');">` : ''}
+       ${disney = model.movies[i].disney != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.movies[i].disney}');">` : ''}
+       ${discovery = model.movies[i].discovery != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/dicovery.png" width="94" height="69" onclick="openInNewTab('${model.movies[i].discovery}');">` : ''}
        </div> </center>
        </div>
        `

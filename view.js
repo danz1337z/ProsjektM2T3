@@ -215,15 +215,15 @@ function favs() {
         <br>
         <div class="btn-group">
        
-        ${Netflix = model.app.netflixLinker[i] != '' ? `<input class="btn" type="image" src="/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.app.netflixLinker[i]}');">` : ''}
-        ${hbo = model.app.hboLinker[i] != '' ? `<input class="btn" type="image" src="/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.app.hboLinker[i]}');">` : ''}
-        ${viaplay = model.app.viaplayLinker[i] != '' ? `<input class="btn" type="image" src="/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.app.viaplayLinker[i]}');">` : ''}
-        ${youtube = model.app.youtubeLinker[i] != '' ? `<input class="btn" type="image" src="/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.app.youtubeLinker[i]}');">` : ''}
-        ${googleplay = model.app.googleLinker[i] != '' ? `<input class="btn" type="image" src="/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.app.googleLinker[i]}');">` : ''}
-        ${appleTV = model.app.appletvLinker[i] != '' ? `<input class="btn" type="image" src="/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.app.appletvLinker[i]}');">` : ''}
-        ${amazon = model.app.amazonLinker[i] != '' ? `<input class="btn" type="image" src="/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.app.amazonLinker[i]}');">` : ''}
-        ${tv2 = model.app.tv2Linker[i] != '' ? `<input class="btn" type="image" src="/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.app.tv2Linker[i]}');">` : ''}
-        ${disney = model.app.disneyLinker[i] != '' ? `<input class="btn" type="image" src="/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.app.disneyLinker[i]}');">` : ''}
+        ${Netflix = model.app.netflixLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/Netflix-Logo.png" width="96" height="54" onclick="openInNewTab('${model.app.netflixLinker[i]}');">` : ''}
+        ${hbo = model.app.hboLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/HBO_logo_blue.png" width="86" height="44" onclick="openInNewTab('${model.app.hboLinker[i]}');">` : ''}
+        ${viaplay = model.app.viaplayLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/viaplay-logo-1-min.png" width="110" height="48" onclick="openInNewTab('${model.app.viaplayLinker[i]}');">` : ''}
+        ${youtube = model.app.youtubeLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/red-youtube-logo-png-xl.png" width="64" height="54" onclick="openInNewTab('${model.app.youtubeLinker[i]}');">` : ''}
+        ${googleplay = model.app.googleLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/Google_Play_logo_store.png" width="54" height="54" onclick="openInNewTab('${model.app.googleLinker[i]}');">` : ''}
+        ${appleTV = model.app.appletvLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/baa.png" width="84" height="54" onclick="openInNewTab('${model.app.appletvLinker[i]}');">` : ''}
+        ${amazon = model.app.amazonLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/prime-video-amazon.webp" width="120" height="54" onclick="openInNewTab('${model.app.amazonLinker[i]}');">` : ''}
+        ${tv2 = model.app.tv2Linker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/TV_2_Norge.webp" width="44" height="54" onclick="openInNewTab('${model.app.tv2Linker[i]}');">` : ''}
+        ${disney = model.app.disneyLinker[i] != '' ? `<input class="btn" type="image" src="/ProsjektM2T3/logos/disneyplus.png" width="100" height="54" onclick="openInNewTab('${model.app.disneyLinker[i]}');">` : ''}
         <br><br>
         <button class="buttis" onclick="slett(${i})">Slett</button>
         <hr>
