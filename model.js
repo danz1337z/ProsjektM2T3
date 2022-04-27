@@ -49,7 +49,6 @@ const model = {
         { id: 2, name: "Thomas", pwd: "Bro321", },
         { id: 3, name: "Frank", pwd: "Covid", profilbilde: "https://i.pinimg.com/originals/02/5b/aa/025baa5b2cd7e46b6b4730247f6663ed.png", },
         { id: 4, name: "Daniel", pwd: "1337pswrd", },
-        { id: 5, name: "", pwd: "", },
     ],
 
     categories: [
