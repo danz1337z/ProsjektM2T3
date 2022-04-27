@@ -64,7 +64,7 @@ function hideMovie(index) {
     model.app.antallHidet++;
     model.app.hide.push(model.movies[index]);
     model.movies.splice(index, 1);
-    alert("Du hida filmen bro!")
+    
     movie();
 }
 //Funksjon som skjuler serie
@@ -72,7 +72,7 @@ function hideSerie(index) {
     model.app.antallHidet++;
     model.app.hide.push(model.series[index]);
     model.series.splice(index, 1);
-    alert("Du hida serien bro!")
+    
     series();
 }
 //Funksjon som skjuler random
@@ -106,15 +106,6 @@ function gjennopprett(index) {
 // Div funksjoner
 function loggpå() {
     if (model.inputs.startpage.login == model.users[0].name && model.inputs.startpage.pwd == model.users[0].pwd) {
-        changePage("startside")
-    }
-    if ((model.inputs.startpage.login == model.users[1].name && model.inputs.startpage.pwd == model.users[1].pwd)) {
-        changePage("startside")
-    }
-    if ((model.inputs.startpage.login == model.users[2].name && model.inputs.startpage.pwd == model.users[2].pwd)) {
-        changePage("startside")
-    }
-    if ((model.inputs.startpage.login == model.users[3].name && model.inputs.startpage.pwd == model.users[3].pwd)) {
         changePage("startside")
     }
     else {
