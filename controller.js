@@ -117,18 +117,6 @@ function loggpå() {
     if ((model.inputs.startpage.login == model.users[3].name && model.inputs.startpage.pwd == model.users[3].pwd)) {
         changePage("startside")
     }
-    if ((model.inputs.startpage.login == model.users[4].name && model.inputs.startpage.pwd == model.users[4].pwd)) {
-        changePage("startside")
-    }
-    if ((model.inputs.startpage.login == model.users[5].name && model.inputs.startpage.pwd == model.users[5].pwd)) {
-        changePage("startside")
-    }
-    if ((model.inputs.startpage.login == model.users[6].name && model.inputs.startpage.pwd == model.users[6].pwd)) {
-        changePage("startside")
-    }
-    if ((model.inputs.startpage.login == model.users[7].name && model.inputs.startpage.pwd == model.users[7].pwd)) {
-        changePage("startside")
-    }
     else {
         alert("Feil Passord eller Brukernavn")
 
