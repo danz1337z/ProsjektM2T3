@@ -25,6 +25,9 @@ function minside() {
     <div class="btn-group">
     <button  type="button" class="button" onclick = "endre()">Endre brukernavn</button>
     <button  type="button" class="button" onclick = "endre2()">Endre passord</button>
+    <br>
+    <br>
+    <button  type="button" class="buttis" onclick = "login()">Logg ut</button>
     </div>
     </div>
     </form>
