@@ -45,7 +45,7 @@ const model = {
     //data
 
     users: [
-        { id: 1, name: "Benjamin", pwd: "Yo123", },
+        { id: 1, name: "Benjamin", pwd: "123Passord", },
     ],
 
     categories: [
